@@ -2,12 +2,13 @@ import { useEffect, useState, useCallback } from "react";
 import store from "../flux/store";
 import { fetchData1 } from "../flux/actions";
 import RecordingCard from "../components/RecordingCard";
+import MapEmbed from "../components/MapEmbeded";
 import "../Styles/FieldRecordings.css";
 
 const FieldRecordings = () => {
 	const [records, setRecords] = useState([]);
 	const [loading, setLoading] = useState(true);
-	// Filtros: cada propiedad corresponde a una columna a filtrar.
+	// Filters for each column.
 	const [filters, setFilters] = useState({
 		Recordist: "",
 		"Key Words": "",
@@ -15,6 +16,7 @@ const FieldRecordings = () => {
 		Date: "",
 	});
 	const [filteredRecords, setFilteredRecords] = useState([]);
+	const [showTopBtn, setShowTopBtn] = useState(false);
 
 	const handleUpdate = useCallback(() => {
 		const data = store.getAll();
@@ -30,9 +32,8 @@ const FieldRecordings = () => {
 		};
 	}, [handleUpdate]);
 
-	// Calcular los valores únicos de cada columna
+	// Compute distinct filter values.
 	const distinctRecordists = [...new Set(records.map((r) => r.Recordist))];
-	// Suponiendo que la columna "Key Words" contiene valores separados por comas:
 	const distinctKeywords = [
 		...new Set(
 			records.flatMap((r) =>
@@ -43,7 +44,7 @@ const FieldRecordings = () => {
 	const distinctConditions = [...new Set(records.map((r) => r.Conditions))];
 	const distinctDates = [...new Set(records.map((r) => r.Date))];
 
-	// Aplicar los filtros a los registros
+	// Apply filters.
 	useEffect(() => {
 		let filtered = records;
 		if (filters.Recordist) {
@@ -67,7 +68,7 @@ const FieldRecordings = () => {
 		setFilteredRecords(filtered);
 	}, [records, filters]);
 
-	// Al hacer clic en un botón de filtro se actualiza el estado. Si el valor ya está activo, se limpia (vuelve a "All").
+	// Toggle filter value on button click.
 	const handleFilterClick = (column, value) => {
 		setFilters((prev) => ({
 			...prev,
@@ -75,14 +76,30 @@ const FieldRecordings = () => {
 		}));
 	};
 
+	// Show scroll-to-top button when window is scrolled down.
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.pageYOffset > 300) {
+				setShowTopBtn(true);
+			} else {
+				setShowTopBtn(false);
+			}
+		};
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
+
+	const scrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: "smooth" });
+	};
+
 	return (
 		<div className='field-recordings-page'>
 			{loading ? (
-				<p>Cargando...</p>
+				<p>loading...</p>
 			) : (
 				<div className='field-recordings-layout'>
 					<div className='filter-sidebar'>
-						{/* Filtro por Recordist */}
 						<div className='filter-group'>
 							<h3>Recordist</h3>
 							<div className='buttons'>
@@ -105,7 +122,6 @@ const FieldRecordings = () => {
 								))}
 							</div>
 						</div>
-						{/* Filtro por Key Words */}
 						<div className='filter-group'>
 							<h3>Key Words</h3>
 							<div className='buttons'>
@@ -130,7 +146,6 @@ const FieldRecordings = () => {
 								))}
 							</div>
 						</div>
-						{/* Filtro por Conditions */}
 						<div className='filter-group'>
 							<h3>Conditions</h3>
 							<div className='buttons'>
@@ -155,7 +170,6 @@ const FieldRecordings = () => {
 								))}
 							</div>
 						</div>
-						{/* Filtro por Date */}
 						<div className='filter-group'>
 							<h3>Date</h3>
 							<div className='buttons'>
@@ -184,8 +198,18 @@ const FieldRecordings = () => {
 							<RecordingCard key={record.id} record={record} />
 						))}
 					</div>
+					<div className='map-container'>
+						<MapEmbed />
+					</div>
 				</div>
 			)}
+			<button
+				className={`scroll-to-top ${showTopBtn ? "show" : ""}`}
+				onClick={scrollToTop}
+				aria-label='Scroll to top'
+			>
+				↑
+			</button>
 		</div>
 	);
 };

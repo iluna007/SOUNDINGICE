@@ -24,6 +24,18 @@ h1 {
   cursor: pointer;
 }
 
+/* Inactive sections: pointer cursor */
+.narrow {
+  flex: 0 0 30px;
+  cursor: pointer;
+}
+
+/* Active section: default cursor */
+.expanded {
+  flex: 1;
+  cursor: default;
+}
+
 /* Narrow (inactive) sections: fixed width of 30px */
 .narrow {
   flex: 0 0 30px;

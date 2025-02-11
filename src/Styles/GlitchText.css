@@ -1,0 +1,33 @@
+/* This style applies a hover glitch effect using CMYK-inspired colors */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+  color: #ffffff; /* Force white text */
+  transition: all 0.1s ease;
+}
+
+/* Only on hover the glitch animation is activated */
+.glitch-text:hover {
+  animation: glitch 0.2s linear infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 5px 5px #00ffff, -5px -5px #ff00ff88, 10px -10px #ffff007d;
+  }
+  20% {
+    text-shadow: -5px 10px #00ffff80, 5px -10px #ff00ff, -10px 5px #ffff00;
+  }
+  40% {
+    text-shadow: 10px -5px #00ffff, -10px 5px #ff00ff88, 5px 10px #ffff007d;
+  }
+  60% {
+    text-shadow: -10px -5px #00ffff80, 10px 5px #ff00ff88, -5px -10px #ffff00;
+  }
+  80% {
+    text-shadow: 5px 10px #00ffff, -5px -10px #ff00ff, 10px -5px #ffff007d;
+  }
+  100% {
+    text-shadow: 5px 5px #00ffff80, -5px -5px #ff00ff88, 10px -10px #ffff00;
+  }
+}

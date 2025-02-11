@@ -43,16 +43,35 @@
 }
 
 .title {
-  font-size: 13vw; /* Mantén el tamaño grande para el título */
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bolder;
+  font-size: 17vw; /* Mantén el tamaño grande para el título */
   margin: 0;
-  line-height: 0.9; /* Ajusta el espacio entre líneas */
+  line-height: 0.8;
+  text-align: justify;
+   /* Ajusta el espacio entre líneas */
 }
 
 .description {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
   font-size: 2vw; /* Tamaño más pequeño para la descripción */
   margin-top: 1rem;
   display: inline-block; /* Para que el fondo se ajuste al contenido */
   padding-left: 50px;
   padding-right: 50px;
   border-radius: 10px;
+  text-align: justify;
+}
+.description2 {
+  font-family: "Montserrat2", sans-serif;
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 1.5vw; /* Tamaño más pequeño para la descripción */
+  margin-top: 1rem;
+  display: inline-block; /* Para que el fondo se ajuste al contenido */
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 10px;
+  text-align: justify;
 }
