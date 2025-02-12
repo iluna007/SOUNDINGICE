@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { getFirebaseUrl } from "../firebaseStorageHelper";
 import "../Styles/RecordingCard.css";
 
 const RecordingCard = ({ record }) => {
@@ -8,19 +7,11 @@ const RecordingCard = ({ record }) => {
 	const [audioUrl, setAudioUrl] = useState(null);
 
 	useEffect(() => {
-		const fetchUrls = async () => {
-			try {
-				const [imgUrl, audUrl] = await Promise.all([
-					getFirebaseUrl(record["Picture file path"]),
-					getFirebaseUrl(record["Sound file path"]),
-				]);
-				setImageUrl(imgUrl);
-				setAudioUrl(audUrl);
-			} catch (error) {
-				console.error("Error fetching URLs:", error);
-			}
-		};
-		fetchUrls();
+		// Using the correct keys from dummy data
+		const imgUrl = record.pictureFilePath;
+		const audUrl = record.soundFilePath;
+		setImageUrl(imgUrl);
+		setAudioUrl(audUrl);
 	}, [record]);
 
 	return (
@@ -28,7 +19,7 @@ const RecordingCard = ({ record }) => {
 			{imageUrl ? (
 				<img
 					src={imageUrl}
-					alt={`Picture for ${record.Recordist}`}
+					alt={`Picture for ${record.recordist}`}
 					className='recording-image'
 					loading='lazy'
 					onError={(e) => {
@@ -42,31 +33,30 @@ const RecordingCard = ({ record }) => {
 			<div className='recording-details'>
 				<h3>{record.id}</h3>
 				<p>
-					<strong>Date:</strong> {record.Date}
+					<strong>Date:</strong> {record.date}
 				</p>
 				<p>
-					<strong>Time:</strong> {record.Time}
+					<strong>Time:</strong> {record.time}
 				</p>
 				<p>
-					<strong>Location:</strong> Lat: {record.Lat}, Lon: {record.Lon}
+					<strong>Location:</strong> Lat: {record.lat}, Lon: {record.lon}
 				</p>
 				<p>
-					<strong>Conditions:</strong> {record.Conditions}
+					<strong>Conditions:</strong> {record.conditions}
 				</p>
 				<p>
-					<strong>Duration:</strong> {record.Duration}
+					<strong>Duration:</strong> {record.Duration || record.duration}
 				</p>
 				<p>
-					<strong>Key Words:</strong> {record["Key Words"]}
+					<strong>Key Words:</strong> {record.tags || record["Key Words"]}
 				</p>
 				<p>
-					<strong>Recordist:</strong> {record.Recordist}
+					<strong>Recordist:</strong> {record.recordist}
 				</p>
-
 				{audioUrl ? (
-					<audio controls aria-label={`Audio recording by ${record.Recordist}`}>
+					<audio controls aria-label={`Audio recording by ${record.recordist}`}>
 						<source src={audioUrl} type='audio/mpeg' />
-						Your web does not support audio element.
+						Your browser does not support the audio element.
 					</audio>
 				) : (
 					<p>Loading Audio...</p>
@@ -78,17 +68,19 @@ const RecordingCard = ({ record }) => {
 
 RecordingCard.propTypes = {
 	record: PropTypes.shape({
-		id: PropTypes.string.isRequired,
-		"Picture file path": PropTypes.string.isRequired,
-		"Sound file path": PropTypes.string.isRequired,
-		Recordist: PropTypes.string.isRequired,
-		Date: PropTypes.string.isRequired,
-		Time: PropTypes.string.isRequired,
-		Lat: PropTypes.string.isRequired,
-		Lon: PropTypes.string.isRequired,
-		Conditions: PropTypes.string.isRequired,
-		Duration: PropTypes.string.isRequired,
-		"Key Words": PropTypes.string.isRequired,
+		id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+		pictureFilePath: PropTypes.string.isRequired,
+		soundFilePath: PropTypes.string.isRequired,
+		recordist: PropTypes.string.isRequired,
+		date: PropTypes.string.isRequired,
+		time: PropTypes.string.isRequired,
+		lat: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+		lon: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+		conditions: PropTypes.string.isRequired,
+		Duration: PropTypes.string,
+		duration: PropTypes.string,
+		tags: PropTypes.string,
+		"Key Words": PropTypes.string,
 	}).isRequired,
 };
 

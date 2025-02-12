@@ -1,15 +1,13 @@
-import axios from "axios";
+import dataDummy from "./datadummy";
 import dispatcher from "./dispatcher";
 
 export const fetchData1 = async () => {
 	try {
-		const response = await axios.get(
-			"https://script.google.com/macros/s/AKfycbzhR1nak_o9kHP7tz7dibuCT4wpPJoGuovmi1-4cohj1Rp_JqpJ1UOx4rnYkSkniQCx/exec"
-		);
-		const data = response.data.sounddata; // Accede a los datos del JSON
-		dispatcher.emit("FETCH_DATA", data); // Envía los datos al store
+		// Optionally simulate a network delay:
+		await new Promise((resolve) => setTimeout(resolve, 500));
+		const data = dataDummy; // Use the dummy array directly
+		dispatcher.emit("FETCH_DATA", data); // Emit the data to the store
 	} catch (error) {
-		console.error("Error fetching data:", error);
+		console.error("Error fetching dummy data:", error);
 	}
 };
-

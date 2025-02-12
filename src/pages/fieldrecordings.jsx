@@ -8,18 +8,18 @@ import "../Styles/FieldRecordings.css";
 const FieldRecordings = () => {
 	const [records, setRecords] = useState([]);
 	const [loading, setLoading] = useState(true);
-	// Filters for each column.
+	// Use lowercase keys to match dummy data.
 	const [filters, setFilters] = useState({
-		Recordist: "",
-		"Key Words": "",
-		Conditions: "",
-		Date: "",
+		recordist: "",
+		tags: "",
+		conditions: "",
+		date: "",
 	});
 	const [filteredRecords, setFilteredRecords] = useState([]);
 	const [showTopBtn, setShowTopBtn] = useState(false);
 
 	const handleUpdate = useCallback(() => {
-		const data = store.getAll();
+		const data = store.getAll() || [];
 		setRecords(data);
 		setLoading(false);
 	}, []);
@@ -32,38 +32,35 @@ const FieldRecordings = () => {
 		};
 	}, [handleUpdate]);
 
-	// Compute distinct filter values.
-	const distinctRecordists = [...new Set(records.map((r) => r.Recordist))];
+	// Compute distinct filter values using correct keys.
+	const distinctRecordists = [...new Set(records.map((r) => r.recordist))];
 	const distinctKeywords = [
 		...new Set(
 			records.flatMap((r) =>
-				r["Key Words"] ? r["Key Words"].split(",").map((k) => k.trim()) : []
+				r.tags ? r.tags.split(",").map((k) => k.trim()) : []
 			)
 		),
 	];
-	const distinctConditions = [...new Set(records.map((r) => r.Conditions))];
-	const distinctDates = [...new Set(records.map((r) => r.Date))];
+	const distinctConditions = [...new Set(records.map((r) => r.conditions))];
+	const distinctDates = [...new Set(records.map((r) => r.date))];
 
-	// Apply filters.
+	// Apply filters using matching keys.
 	useEffect(() => {
 		let filtered = records;
-		if (filters.Recordist) {
-			filtered = filtered.filter((r) => r.Recordist === filters.Recordist);
+		if (filters.recordist) {
+			filtered = filtered.filter((r) => r.recordist === filters.recordist);
 		}
-		if (filters["Key Words"]) {
+		if (filters.tags) {
 			filtered = filtered.filter(
 				(r) =>
-					r["Key Words"] &&
-					r["Key Words"]
-						.toLowerCase()
-						.includes(filters["Key Words"].toLowerCase())
+					r.tags && r.tags.toLowerCase().includes(filters.tags.toLowerCase())
 			);
 		}
-		if (filters.Conditions) {
-			filtered = filtered.filter((r) => r.Conditions === filters.Conditions);
+		if (filters.conditions) {
+			filtered = filtered.filter((r) => r.conditions === filters.conditions);
 		}
-		if (filters.Date) {
-			filtered = filtered.filter((r) => r.Date === filters.Date);
+		if (filters.date) {
+			filtered = filtered.filter((r) => r.date === filters.date);
 		}
 		setFilteredRecords(filtered);
 	}, [records, filters]);
@@ -104,8 +101,8 @@ const FieldRecordings = () => {
 							<h3>Recordist</h3>
 							<div className='buttons'>
 								<button
-									className={`filter-btn ${!filters.Recordist ? "active" : ""}`}
-									onClick={() => handleFilterClick("Recordist", "")}
+									className={`filter-btn ${!filters.recordist ? "active" : ""}`}
+									onClick={() => handleFilterClick("recordist", "")}
 								>
 									All
 								</button>
@@ -113,9 +110,9 @@ const FieldRecordings = () => {
 									<button
 										key={name}
 										className={`filter-btn ${
-											filters.Recordist === name ? "active" : ""
+											filters.recordist === name ? "active" : ""
 										}`}
-										onClick={() => handleFilterClick("Recordist", name)}
+										onClick={() => handleFilterClick("recordist", name)}
 									>
 										{name}
 									</button>
@@ -126,10 +123,8 @@ const FieldRecordings = () => {
 							<h3>Key Words</h3>
 							<div className='buttons'>
 								<button
-									className={`filter-btn ${
-										!filters["Key Words"] ? "active" : ""
-									}`}
-									onClick={() => handleFilterClick("Key Words", "")}
+									className={`filter-btn ${!filters.tags ? "active" : ""}`}
+									onClick={() => handleFilterClick("tags", "")}
 								>
 									All
 								</button>
@@ -137,9 +132,9 @@ const FieldRecordings = () => {
 									<button
 										key={keyword}
 										className={`filter-btn ${
-											filters["Key Words"] === keyword ? "active" : ""
+											filters.tags === keyword ? "active" : ""
 										}`}
-										onClick={() => handleFilterClick("Key Words", keyword)}
+										onClick={() => handleFilterClick("tags", keyword)}
 									>
 										{keyword}
 									</button>
@@ -151,9 +146,9 @@ const FieldRecordings = () => {
 							<div className='buttons'>
 								<button
 									className={`filter-btn ${
-										!filters.Conditions ? "active" : ""
+										!filters.conditions ? "active" : ""
 									}`}
-									onClick={() => handleFilterClick("Conditions", "")}
+									onClick={() => handleFilterClick("conditions", "")}
 								>
 									All
 								</button>
@@ -161,9 +156,9 @@ const FieldRecordings = () => {
 									<button
 										key={condition}
 										className={`filter-btn ${
-											filters.Conditions === condition ? "active" : ""
+											filters.conditions === condition ? "active" : ""
 										}`}
-										onClick={() => handleFilterClick("Conditions", condition)}
+										onClick={() => handleFilterClick("conditions", condition)}
 									>
 										{condition}
 									</button>
@@ -174,8 +169,8 @@ const FieldRecordings = () => {
 							<h3>Date</h3>
 							<div className='buttons'>
 								<button
-									className={`filter-btn ${!filters.Date ? "active" : ""}`}
-									onClick={() => handleFilterClick("Date", "")}
+									className={`filter-btn ${!filters.date ? "active" : ""}`}
+									onClick={() => handleFilterClick("date", "")}
 								>
 									All
 								</button>
@@ -183,9 +178,9 @@ const FieldRecordings = () => {
 									<button
 										key={date}
 										className={`filter-btn ${
-											filters.Date === date ? "active" : ""
+											filters.date === date ? "active" : ""
 										}`}
-										onClick={() => handleFilterClick("Date", date)}
+										onClick={() => handleFilterClick("date", date)}
 									>
 										{date}
 									</button>
@@ -194,9 +189,13 @@ const FieldRecordings = () => {
 						</div>
 					</div>
 					<div className='recording-list'>
-						{filteredRecords.map((record) => (
-							<RecordingCard key={record.id} record={record} />
-						))}
+						{filteredRecords.length > 0 ? (
+							filteredRecords.map((record) => (
+								<RecordingCard key={record.id} record={record} />
+							))
+						) : (
+							<p>No recordings available.</p>
+						)}
 					</div>
 					<div className='map-container'>
 						<MapEmbed />
