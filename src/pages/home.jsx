@@ -41,8 +41,25 @@ const Home = () => {
 					<p className='description'>
 						An acoustic cartography exploring the signals of climate change
 						found in and around the Yukon River—its confluences and histories.
-						Produced in collaboration with students from the Yukon School of
-						Visual Arts, Dawson City, Canada, Winter 2025
+						Produced in collaboration with students from{" "}
+						<a
+							href='https://yukonsova.net/'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='glitch-link'
+						>
+							<GlitchText>Yukon School of Visual Arts</GlitchText>
+						</a>
+						,
+						<a
+							href='https://dawsoncity.ca/'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='glitch-link'
+						>
+							<GlitchText>Dawson City</GlitchText>
+						</a>
+						, Canada, Winter 2025
 					</p>
 					<p className='description2'>
 						This sound mapping project acknowledges the vital presence of the

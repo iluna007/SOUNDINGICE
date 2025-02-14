@@ -1,0 +1,11 @@
+/* src/Styles/About.css */
+.example {
+  margin-bottom: 40px;
+}
+
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
