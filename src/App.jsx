@@ -1,6 +1,8 @@
 import { Suspense, lazy } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Layout"; // Import our new Layout
+import ScrollToTopButton from "./components/ScrollToTopButton"; // Import ScrollToTopButton
+
 
 // Lazy-loaded pages
 const Home = lazy(() => import("./pages/home"));
@@ -17,13 +19,14 @@ const App = () => {
 				<Layout>
 					<Routes>
 						<Route path='/' element={<Home />} />
-						<Route path='/about' element={<About />} />
-						<Route path='/fieldworks' element={<FieldWorks />} />
 						<Route path='/fieldrecordings' element={<FieldRecordings />} />
+						<Route path='/fieldworks' element={<FieldWorks />} />
 						<Route path='/resources' element={<Resources />} />
+						<Route path='/about' element={<About />} />
 					</Routes>
 				</Layout>
 			</Suspense>
+			<ScrollToTopButton />
 		</div>
 	);
 };

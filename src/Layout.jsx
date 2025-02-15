@@ -5,13 +5,6 @@ import "./Styles/Layout.css";
 // Define our five pages with routes, colors and Material icon names.
 const pages = [
 	{ title: "Home", route: "/", color: "#ffffff", icon: "ac_unit" },
-	{ title: "About", route: "/about", color: "#00ffff", icon: "info" },
-	{
-		title: "Field Works",
-		route: "/fieldworks",
-		color: "#ff00ff",
-		icon: "asterisk",
-	},
 	{
 		title: "Field Recordings",
 		route: "/fieldrecordings",
@@ -19,20 +12,28 @@ const pages = [
 		icon: "graphic_eq",
 	},
 	{
+		title: "Field Works",
+		route: "/fieldworks",
+		color: "#ff00ff",
+		icon: "asterisk",
+	},
+
+	{
 		title: "Resources",
 		route: "/resources",
 		color: "#000000",
 		icon: "bookmark",
 	},
+	{ title: "About", route: "/about", color: "#00ffff", icon: "info" },
 ];
 
 // Define darker scrollbar colors for each background.
 const scrollbarColors = {
 	"#ffffff": { track: "#dddddd", thumb: "#bbbbbb" },
-	"#00ffff": { track: "#009999", thumb: "#007777" },
-	"#ff00ff": { track: "#990099", thumb: "#770077" },
 	"#ffff00": { track: "#cccc00", thumb: "#aaaa00" },
+	"#ff00ff": { track: "#990099", thumb: "#770077" },
 	"#000000": { track: "#333333", thumb: "#222222" },
+	"#00ffff": { track: "#009999", thumb: "#007777" },
 };
 
 // Custom hook to get window width.

@@ -9,7 +9,8 @@ const datadummy = [
 		temperature: "-35°C",
 		conditions: "Clear",
 		tags: "Field Recording",
-		soundFilePath:
+		// URL original del audio
+		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316582/Hornshund_Underwater_c7abfh.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055290/Yukon_River_2_fbi0r9.jpg",
@@ -24,7 +25,7 @@ const datadummy = [
 		temperature: "-35°C",
 		conditions: "Cloudy",
 		tags: "Yukon River",
-		soundFilePath:
+		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Iceberg_Calving_-_Hansbreen_Glacier_r1gewz.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055289/field_recording_2_xan6ng.jpg",
@@ -39,7 +40,7 @@ const datadummy = [
 		temperature: "-35°C",
 		conditions: "Cloudy",
 		tags: "Klondike River",
-		soundFilePath:
+		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Belcher_Glacier_knpuil.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055289/students_working_5_a43l75.jpg",
@@ -54,10 +55,10 @@ const datadummy = [
 		temperature: "-35°C",
 		conditions: "Snow",
 		tags: "Field Work",
-		soundFilePath:
+		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Grant_Deane_Records_Melting_Ice_xn4mp2.mp3",
 		pictureFilePath:
-			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055289/Yukon_River_1_wsuiqa.jpg",
+			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055290/Yukon_River_1_wsuiqa.jpg",
 	},
 	{
 		id: 5,
@@ -69,7 +70,7 @@ const datadummy = [
 		temperature: "-35°C",
 		conditions: "Cloudy",
 		tags: "Tombstone Territorial Park",
-		soundFilePath:
+		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316582/Hornshund_Underwater_c7abfh.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055289/Tombstone_Park_4_l7hfui.jpg",
@@ -84,7 +85,7 @@ const datadummy = [
 		temperature: "-35°C",
 		conditions: "Rain",
 		tags: "Interviews",
-		soundFilePath:
+		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316582/Hornshund_Underwater_c7abfh.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055288/field_recording_3_gulz7r.jpg",
@@ -99,7 +100,7 @@ const datadummy = [
 		temperature: "-35°C",
 		conditions: "Cloudy",
 		tags: "Tombstone Territorial Park",
-		soundFilePath:
+		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Iceberg_Calving_-_Hansbreen_Glacier_r1gewz.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055288/Tombstone_Park_3_zieofz.jpg",
@@ -114,7 +115,7 @@ const datadummy = [
 		temperature: "-35°C",
 		conditions: "Rain",
 		tags: "Interviews",
-		soundFilePath:
+		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Belcher_Glacier_knpuil.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055288/Tombstone_Park_1_crjb7h.jpg",
@@ -129,7 +130,7 @@ const datadummy = [
 		temperature: "-35°C",
 		conditions: "Cloudy",
 		tags: "Klondike River",
-		soundFilePath:
+		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Grant_Deane_Records_Melting_Ice_xn4mp2.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055288/drilling_river_ice_ya1yvt.jpg",
@@ -144,7 +145,7 @@ const datadummy = [
 		temperature: "-35°C",
 		conditions: "Snow",
 		tags: "Klondike River",
-		soundFilePath:
+		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Grant_Deane_Records_Melting_Ice_xn4mp2.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055293/students_working_2_ibr7vr.jpg",
@@ -159,10 +160,10 @@ const datadummy = [
 		temperature: "-35°C",
 		conditions: "Clear",
 		tags: "Field Recording",
-		soundFilePath:
+		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Belcher_Glacier_knpuil.mp3",
 		pictureFilePath:
-			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055292/Yukon_River-5_faolxu.jpg",
+			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055282/Yukon_River-5_faolxu.jpg",
 	},
 	{
 		id: 12,
@@ -174,10 +175,10 @@ const datadummy = [
 		temperature: "-35°C",
 		conditions: "Clear",
 		tags: "Field Recording",
-		soundFilePath:
+		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Iceberg_Calving_-_Hansbreen_Glacier_r1gewz.mp3",
 		pictureFilePath:
-			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055291/Yukon_River_4_hlp5dg.jpg",
+			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055281/Yukon_River_4_hlp5dg.jpg",
 	},
 	{
 		id: 13,
@@ -189,7 +190,7 @@ const datadummy = [
 		temperature: "-35°C",
 		conditions: "Clear",
 		tags: "Field Recording",
-		soundFilePath:
+		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316582/Hornshund_Underwater_c7abfh.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055291/Yukon_River_3_xoonfg.jpg",
@@ -197,5 +198,3 @@ const datadummy = [
 ];
 
 export default datadummy;
-
-

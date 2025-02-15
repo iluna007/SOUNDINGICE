@@ -1,5 +1,6 @@
 import "../Styles/About.css";
 
+
 const About = () => {
 	return (
 		<div className='container-fluid'>
@@ -132,6 +133,7 @@ const About = () => {
 					<div className='col-2'></div>
 				</div>
 			</div>
+			
 		</div>
 	);
 };
