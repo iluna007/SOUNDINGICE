@@ -1,41 +1,33 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import Waveform from "./Waveform"; // Asegúrate de que la ruta sea correcta
 import "../Styles/RecordingCard.css";
 
 const RecordingCard = ({ record }) => {
-	const [preview, setPreview] = useState(true);
+	const [expanded, setExpanded] = useState(false);
 
-	useEffect(() => {
-		setPreview(true);
-	}, [record]);
+	const toggleExpanded = () => {
+		setExpanded((prev) => !prev);
+	};
 
 	return (
 		<div
 			className='recording-card'
+			onClick={toggleExpanded}
 			id={`record-${record.id}`}
-			onClick={() => setPreview(false)}
-			style={{ cursor: "pointer" }}
 		>
 			<img
 				src={record.pictureFilePath}
 				alt={`Picture for ${record.recordist}`}
-				className='recording-image'
+				className='recording-image glitch-image'
 				loading='lazy'
 				onError={(e) => {
 					e.target.src =
 						"https://dummyimage.com/300x300/cccccc/ffffff&text=No+Image";
 				}}
 			/>
-			{preview && (
-				<div className='preview-info'>
-					<Waveform audioUrl={record.audioFilePath} />
-					<p className='recording-id'>ID: {record.id}</p>
-				</div>
-			)}
-			{!preview && (
+			{expanded ? (
 				<div className='recording-details'>
-					<h3>{record.id}</h3>
+					<h3>ID: {record.id}</h3>
 					<p>
 						<strong>Date:</strong> {record.date}
 					</p>
@@ -61,6 +53,10 @@ const RecordingCard = ({ record }) => {
 						<source src={record.audioFilePath} type='audio/mpeg' />
 						Your browser does not support the audio element.
 					</audio>
+				</div>
+			) : (
+				<div className='preview-info'>
+					<p className='recording-id'>ID: {record.id}</p>
 				</div>
 			)}
 		</div>

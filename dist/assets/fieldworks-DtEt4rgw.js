@@ -1,0 +1,1 @@
+import{j as r}from"./react-V8IiPZyx.js";import"./cookie-BX9QSSmL.js";const o=()=>r.jsxs("div",{children:[r.jsx("h1",{children:"Field Works"}),r.jsx("p",{children:"Field Trip / Tombstone Territorial Park"}),r.jsx("p",{children:"Workshop / DCMF Studio Recording Seminar"})]});export{o as default};

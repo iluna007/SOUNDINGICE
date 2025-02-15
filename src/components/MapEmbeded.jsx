@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import ReactMapGL, { Marker, Popup } from "react-map-gl";
+import ReactMapGL, { Marker, Popup, NavigationControl } from "react-map-gl";
 import mapboxgl from "mapbox-gl";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import store from "../flux/store";
@@ -12,9 +12,11 @@ mapboxgl.accessToken =
 
 const MapEmbed = () => {
 	const [viewport, setViewport] = useState({
-		latitude: 64.03985877,
-		longitude: -138.1501049,
-		zoom: 3,
+		latitude: 64.049004,
+		longitude: -139.442815,
+		zoom: 12.96,
+		pitch: 62.11,
+		bearing: 0,
 		width: "100%",
 		height: "100%",
 	});
@@ -33,6 +35,17 @@ const MapEmbed = () => {
 		return () => store.off("change", update);
 	}, []);
 
+	const handleMapLoad = () => {
+		const map = mapRef.current.getMap();
+		map.addSource("mapbox-dem", {
+			type: "raster-dem",
+			url: "mapbox://mapbox.mapbox-terrain-dem-v1",
+			tileSize: 512,
+			maxzoom: 14,
+		});
+		map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
+	};
+
 	const handleMarkerClick = (record) => {
 		selectRecord(record);
 	};
@@ -41,13 +54,14 @@ const MapEmbed = () => {
 		<ReactMapGL
 			ref={mapRef}
 			{...viewport}
-			mapStyle='mapbox://styles/ikerluna/cm2dk18gv007l01ph2anbepkk'
+			mapStyle='mapbox://styles/ikerluna/cm76812yz01va01qx4nvo4nf3'
 			mapboxApiAccessToken={mapboxgl.accessToken}
-			// En v8 se usa onMove en lugar de onViewportChange
+			onLoad={handleMapLoad}
 			onMove={(evt) => setViewport(evt.viewState)}
 			onError={(error) => console.error("Mapbox error:", error)}
 			interactive={true}
 		>
+			<NavigationControl position='top-right' />
 			{records.map((record) => (
 				<Marker key={record.id} latitude={record.lat} longitude={record.lon}>
 					<div
@@ -65,7 +79,6 @@ const MapEmbed = () => {
 					</div>
 				</Marker>
 			))}
-
 			{selectedRecord && (
 				<Popup
 					className='custom-popup'
@@ -77,9 +90,11 @@ const MapEmbed = () => {
 					offsetTop={-10}
 				>
 					<div>
-						<p>ID: {selectedRecord.id}</p>
+						<div style={{ textAlign: "center" }}>
+							<h3>{selectedRecord.id}</h3>
+						</div>
 						<audio controls autoPlay>
-							<source src={selectedRecord.soundFilePath} type='audio/mpeg' />
+							<source src={selectedRecord.audioFilePath} type='audio/mpeg' />
 							Your browser does not support the audio element.
 						</audio>
 					</div>
