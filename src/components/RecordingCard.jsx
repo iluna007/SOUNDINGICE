@@ -27,7 +27,7 @@ const RecordingCard = ({ record }) => {
 			/>
 			{expanded ? (
 				<div className='recording-details'>
-					<h3>ID: {record.id}</h3>
+					<h3>{record.id}</h3>
 					<p>
 						<strong>Date:</strong> {record.date}
 					</p>
@@ -56,7 +56,7 @@ const RecordingCard = ({ record }) => {
 				</div>
 			) : (
 				<div className='preview-info'>
-					<p className='recording-id'>ID: {record.id}</p>
+					<h3 className='recording-id'> {record.id}</h3>
 				</div>
 			)}
 		</div>
