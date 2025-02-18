@@ -21,7 +21,7 @@ const Fieldworks = () => {
 						<div className='row mt-5'>
 							<div className='col-md-3 '>
 								<h3 className='subtitles'>
-									Crackling Transmissions & amp; Cracking Ice
+									Crackling Transmissions & Cracking Ice
 								</h3>
 								<p className='description_general'>
 									Drilling a series of holes through the 1.5 metre thickness of
@@ -109,12 +109,12 @@ const Fieldworks = () => {
 								<p className='description_general'>
 									As feedback loops between the hydrological cycles of these two
 									great river systems interact with societal changes as well as
-									broader geopolitical forces, how might we tune into their
-									complex sonic worlds and histories? What different climate
-									futures do these rivers face; futures that must also include
-									living communities, animal habitats and ecosystems as well as
-									the many different socio-economic pressures that organise life
-									in the North?
+									broader forces, how might we tune into their complex sonic
+									worlds and histories? What different climate horizons do these
+									rivers now  face; futures that must also include living
+									communities, animal habitats and ecosystems as well as the
+									many different socio- economic pressures that organise life in
+									the North?
 								</p>
 								<p className='description_general'>
 									<strong>Equipment used:</strong> Tremor Labs XEOFÓN - Geophone

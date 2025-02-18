@@ -27,7 +27,7 @@ const About = () => {
 						</p>
 						<p>
 							Produced in collaboration with students from the Yukon School of
-							Visual Arts , Dawson City . Realised by Susan Schuppli during the
+							Visual Arts, Dawson City. Realised by Susan Schuppli during the
 							winter of 2025.
 						</p>
 						<p>
@@ -81,7 +81,7 @@ const About = () => {
 						</p>
 						<p>
 							Project Credits: Drone Footage by John Howland & Bobby XXX.
-							Website designed by Iker Luna
+							Website designed by Iker Luna.
 						</p>
 
 						<h3>Biographies</h3>
@@ -119,7 +119,7 @@ const About = () => {
 								className='glitch-link'
 							>
 								Forensic Architecture
-							</a>
+							</a>{" "}
 							recipient of the 2024 Right Livelihood Award.
 						</p>
 
