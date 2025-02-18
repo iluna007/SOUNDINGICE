@@ -42,7 +42,6 @@ const Home = () => {
 						An acoustic cartography exploring the signals of climate change
 						found in and around the Yukon and Klondike Rivers—their confluences
 						and histories.
-						
 					</p>
 					<p className='description2'>
 						This sound mapping project acknowledges the vital presence of the
