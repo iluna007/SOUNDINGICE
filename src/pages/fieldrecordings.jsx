@@ -84,9 +84,9 @@ const FieldRecordings = () => {
 
 	return (
 		<div className='field-recordings-page'>
-			<header>
+			<div>
 				<h2 className='titlefieldrecordings'>Field Recordings</h2>
-			</header>
+			</div>
 			<div className='field-recordings-layout'>
 				<div className='left-column'>
 					<div className='filter-sidebar'>
@@ -209,6 +209,7 @@ const FieldRecordings = () => {
 					</div>
 				</div>
 			</div>
+			
 			<button
 				className={`scroll-to-top ${showTopBtn ? "show" : ""}`}
 				onClick={scrollToTop}

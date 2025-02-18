@@ -17,7 +17,7 @@ const MapEmbed = () => {
 		zoom: 12.96,
 		pitch: 62.11,
 		bearing: 0,
-		width: "100%",
+		width: "100vh",
 		height: "100%",
 	});
 	const [records, setRecords] = useState(store.getAll());
@@ -61,7 +61,7 @@ const MapEmbed = () => {
 			onError={(error) => console.error("Mapbox error:", error)}
 			interactive={true}
 		>
-			<NavigationControl position='top-right' />
+			<NavigationControl position='top-left' />
 			{records.map((record) => (
 				<Marker key={record.id} latitude={record.lat} longitude={record.lon}>
 					<div
