@@ -24,12 +24,12 @@ const Resources = () => {
 								<li>
 									<strong>Benoit Turcotte.</strong> “Will There Be an Ice Bridge
 									This Winter? Predicting Spatio-Temporal Freeze-up Patterns
-									Along the Yukon River, Canada”.
+									Along the Yukon River, Canada”.{" "}
 									<a
 										href='https://www.iahr.org/library/infor?pid=8556'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description4'
 									>
 										Proceedings of the 25th IAHR International Symposium on Ice
 										(Trondheim, 2020).
@@ -64,7 +64,7 @@ const Resources = () => {
 								</li>
 								<li>
 									<strong>Steven Feld.</strong> “Acoustemology: in Keywords in
-									Sound”, eds. D. Novak &amp; M. Sakakeeny, Duke University
+									Sound”, eds. D. Novak & amp; M. Sakakeeny, Duke University
 									Press 2015.
 								</li>
 								<li>
@@ -94,7 +94,7 @@ const Resources = () => {
 											href='https://www.yukonu.ca/sites/default/files/inline-files/Compendium%202021.pdf'
 											target='_blank'
 											rel='noopener noreferrer'
-											className='glitch-link'
+											className='description4'
 										>
 											Yukon Climate Change Compendium 2021.
 										</a>
@@ -106,12 +106,12 @@ const Resources = () => {
 							<h3 className='subtitles'>Projects & Podcasts</h3>
 							<ul className='description4'>
 								<li>
-									Alice Eldridge –
+									Alice Eldridge –{" "}
 									<a
 										href='https://www.youtube.com/watch?v=R3KxzxIKsXI'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description4'
 									>
 										Learning to Listen.
 									</a>
@@ -121,21 +121,21 @@ const Resources = () => {
 										href='https://amkanngieser.com/'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description4'
 									>
 										Anja Kanngieser
-									</a>
+									</a>{" "}
 									– Geographer and sound artist exploring listening and
 									attunement to the relations between people, place, and
 									ecologies.
 								</li>
 								<li>
-									Philip Samartzis –
+									Philip Samartzis –{" "}
 									<a
 										href='https://index.bogongsound.com.au/'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description4'
 									>
 										The Bogong High Plains Sound Map.
 									</a>
@@ -146,7 +146,7 @@ const Resources = () => {
 										href='https://www.youtube.com/watch?v=xCYN6IovKvc'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description4'
 									>
 										The Wanderer
 									</a>
@@ -158,18 +158,18 @@ const Resources = () => {
 										href='https://www.polyphonyproject.com/en'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description4'
 									>
 										Polyphony Project.
 									</a>
 								</li>
 								<li>
-									Pauline Oliveros –
+									Pauline Oliveros –{" "}
 									<a
 										href='https://www.library.ignota.org/book/quantum-listening/'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description4'
 									>
 										Quantum Listening.
 									</a>
@@ -179,7 +179,7 @@ const Resources = () => {
 										href='https://rfcx.org/'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description4'
 									>
 										Rainforest Connection.
 									</a>
@@ -194,7 +194,7 @@ const Resources = () => {
 										href='https://coldcutsvideofestival.wordpress.com/'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description4'
 									>
 										Cold Cuts Video Festival
 									</a>
@@ -204,7 +204,7 @@ const Resources = () => {
 										href='https://cripe.ca/'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description4'
 									>
 										Committee on River Ice Processes and the Environment
 									</a>
@@ -214,7 +214,7 @@ const Resources = () => {
 										href='https://www.dawsonfilmfest.com/about.html'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description4'
 									>
 										Dawson City Film Fest
 									</a>
@@ -224,7 +224,7 @@ const Resources = () => {
 										href='http://dawson.meteomac.com/'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description4'
 									>
 										Dawson weather station
 									</a>
@@ -234,7 +234,7 @@ const Resources = () => {
 										href='https://kiac.ca/'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description4'
 									>
 										Klondike Institute of Art &amp; Culture (KIAC)
 									</a>
@@ -244,7 +244,7 @@ const Resources = () => {
 										href='https://www.yukonu.ca/programs/continuing-studies/climate-change'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description4'
 									>
 										Yukon University / The Climate Change Research Program
 									</a>

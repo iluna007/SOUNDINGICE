@@ -22,28 +22,14 @@ img.img-fluid {
 
 .description4 {
   font-family: "Montserrat", sans-serif;
-  font-weight: regular;
+  font-weight: normal;
   font-size: 1vw; /* Tamaño más pequeño para la descripción */
-  margin-top: 1rem;
   display: inline-block; /* Para que el fondo se ajuste al contenido */
-  padding-left: 50px;
-  padding-right: 50px;
-  border-radius: 10px;
   text-align: justify;
   text-align: left;
+  color: inherit;
 }
-.description2 {
-  font-family: "Montserrat2", sans-serif;
-  font-weight: lighter;
-  font-style: italic;
-  font-size: 2vw; /* Tamaño más pequeño para la descripción */
-  margin-top: 1rem;
-  display: inline-block; /* Para que el fondo se ajuste al contenido */
-  padding-left: 50px;
-  padding-right: 50px;
-  border-radius: 10px;
-  text-align: justify;
-}
+
 
 .subtitles {
   font-family: "Montserrat2", sans-serif;
