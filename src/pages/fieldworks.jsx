@@ -15,7 +15,7 @@ const Fieldworks = () => {
 			>
 				<div className='row example'>
 					<div className='col'>
-						<h2 className='titlefieldworks'>Field Works</h2>
+						<h2 className='title'>Field Works</h2>
 
 						{/* Four-column section */}
 						<div className='row mt-5'>
@@ -23,7 +23,8 @@ const Fieldworks = () => {
 								<h3 className='subtitles'>
 									Crackling Transmissions & Cracking Ice
 								</h3>
-								<p className='description_general'>
+								<hr></hr>
+								<p className='description'>
 									Drilling a series of holes through the 1.5 metre thickness of
 									winter-ice allows us to lower our hydrophones and tune into
 									the underwater sounds of the Yukon River. The stillness that
@@ -33,7 +34,7 @@ const Fieldworks = () => {
 									compressed air being released from chunks of free-floating
 									ice.
 								</p>
-								<p className='description_general'>
+								<p className='description'>
 									<strong>Equipment used:</strong> Aquarian Audio H3
 									omni-directional Hydrophone range 10 Hz to 100KHz and the
 									Ambient Sound Fish omni-directional Hydrophone ASF-1 MKII 7Hz-
@@ -42,7 +43,8 @@ const Fieldworks = () => {
 							</div>
 							<div className='col-md-3'>
 								<h3 className='subtitles'>From Deep Freeze to Thaw</h3>
-								<p className='description_general'>
+								<hr></hr>
+								<p className='description'>
 									The Yukon is already warming at twice the rate of the entire
 									Planet. As temperatures continue to rise, average annual
 									precipitation will increase and become more variable. The
@@ -51,7 +53,7 @@ const Fieldworks = () => {
 										href='https://yukon.ca/en/science-and-natural-resources/research-and-monitoring/climate-change-yukon'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='description_general'
+										className='description_forlinks'
 									>
 										climate change in the Yukon
 									</a>
@@ -64,7 +66,7 @@ const Fieldworks = () => {
 									signals of climate change across many different scales and
 									contexts.
 								</p>
-								<p className='description_general'>
+								<p className='description'>
 									<strong>Equipment used:</strong> LOM Uši pair of
 									stereo-matched, low noise and high sensitivity
 									omni-directional microphones for recording delicate sounds and
@@ -75,7 +77,8 @@ const Fieldworks = () => {
 							</div>
 							<div className='col-md-3'>
 								<h3 className='subtitles'>Auroral Acoustics</h3>
-								<p className='description_general'>
+								<hr></hr>
+								<p className='description'>
 									When solar winds break through the Earth’s magnetic field,
 									their charged particles collide with molecules of atmospheric
 									gases producing a ‘natural cinema’ that electrifies the night
@@ -84,7 +87,7 @@ const Fieldworks = () => {
 									Using a series of bespoke microphones we tune into the sonic
 									worlds of these natural radio signals.
 								</p>
-								<p className='description_general'>
+								<p className='description'>
 									“We can ‘hear’ the aurorae as a busy chatter when these radio
 									signals are converted to sound, again varying on the real
 									timescale that you can hear."{" "}
@@ -92,12 +95,12 @@ const Fieldworks = () => {
 										href='https://www.gresham.ac.uk/watch-now/sounds-universe'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='description_general'
+										className='description_forlinks'
 									>
 										Astronomer Caroline Crawford on the sounds of the universe.
 									</a>
 								</p>
-								<p className='description_general'>
+								<p className='description'>
 									<strong>Equipment used:</strong> LOM Elektrosluch 3+ is an
 									open-source device for listening to electromagnetic fields.
 									Mole-Rat is an experimental EMF audio device for exploring the
@@ -106,7 +109,8 @@ const Fieldworks = () => {
 							</div>
 							<div className='col-md-3'>
 								<h3 className='subtitles'>Frozen Futures</h3>
-								<p className='description_general'>
+								<hr></hr>
+								<p className='description'>
 									As feedback loops between the hydrological cycles of these two
 									great river systems interact with societal changes as well as
 									broader forces, how might we tune into their complex sonic
@@ -116,7 +120,7 @@ const Fieldworks = () => {
 									many different socio- economic pressures that organise life in
 									the North?
 								</p>
-								<p className='description_general'>
+								<p className='description'>
 									<strong>Equipment used:</strong> Tremor Labs XEOFÓN - Geophone
 									Seismic Omni-directional Microphone (Converts seismic activity
 									and vibrations into voltages). Zoom H5 4-Track Portable
@@ -128,9 +132,9 @@ const Fieldworks = () => {
 						{/* Field Trip section */}
 						<div className='row mt-5'>
 							<div className='col-md-12'>
-								<h3>Field Trip</h3>
+								<h3 className='subtitles'>Field Trip</h3>
 								<hr></hr>
-								<p className='description2'>
+								<p className='description'>
 									Tombstone Territorial Park. This is a 2,200 square kilometres
 									protected and unique wilderness of rugged peaks, permafrost
 									landforms and abundant wildlife, all reflected in a rich First

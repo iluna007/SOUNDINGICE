@@ -38,7 +38,7 @@ const Home = () => {
 							<GlitchText>ICE</GlitchText>
 						</Link>
 					</h1>
-					<p className='description'>
+					<p className='description1'>
 						An acoustic cartography exploring the signals of climate change
 						found in and around the Yukon and Klondike Rivers—their confluences
 						and histories.
