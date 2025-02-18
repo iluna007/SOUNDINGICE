@@ -24,12 +24,12 @@ img.img-fluid {
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
   font-size: 1vw; /* Tamaño más pequeño para la descripción */
-  margin-top: 1rem;
   display: inline-block; /* Para que el fondo se ajuste al contenido */
   padding-left: 5px;
   padding-right: 5px;
   text-align: justify;
   text-align: left;
+  color: inherit;
 }
 .subtitles {
   font-family: "Montserrat2", sans-serif;

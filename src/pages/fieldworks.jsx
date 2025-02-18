@@ -51,7 +51,7 @@ const Fieldworks = () => {
 										href='https://yukon.ca/en/science-and-natural-resources/research-and-monitoring/climate-change-yukon'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description_general'
 									>
 										climate change in the Yukon
 									</a>
@@ -92,7 +92,7 @@ const Fieldworks = () => {
 										href='https://www.gresham.ac.uk/watch-now/sounds-universe'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='glitch-link'
+										className='description_general'
 									>
 										Astronomer Caroline Crawford on the sounds of the universe.
 									</a>
