@@ -32,15 +32,15 @@ img.img-fluid {
   text-align: justify;
   text-align: right;
 }
-.description2 {
+.description5 {
   font-family: "Montserrat2", sans-serif;
   font-weight: lighter;
-  font-style: italic;
-  font-size: 2vw; /* Tamaño más pequeño para la descripción */
-  margin-top: 1rem;
+  font-style: regular;
+  font-size: 1vw; /* Tamaño más pequeño para la descripción */
   display: inline-block; /* Para que el fondo se ajuste al contenido */
-  padding-left: 50px;
-  padding-right: 50px;
-  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
   text-align: justify;
+  color: inherit;
 }

@@ -20,42 +20,42 @@ const About = () => {
 						<h2 className='titleabout'>About</h2>
 						<div className='mt-5'></div>
 						<div className='mt-5'></div>
-						<p>
+						<p className='description5'>
 							<strong>SOUNDING ICE: sensing frozen flows</strong> explores the
 							signals of climate change found in and around the Yukon and
 							Klondike Rivers—their confluences and histories.
 						</p>
-						<p>
+						<p className='description5'>
 							Produced in collaboration with students from the Yukon School of
 							Visual Arts, Dawson City. Realised by Susan Schuppli during the
 							winter of 2025.
 						</p>
-						<p>
+						<p className='description5'>
 							This acoustic cartography is a way of doing-mapping ‘otherwise’. A
 							collective practice of sounding and listening to the
 							transmissional waves, sonic seepages, and vibrational resonances
 							of environmental matter in a state of transformation and change.
 						</p>
-						<p>
+						<p className='description5'>
 							It is also a way of tuning into the embodied and perceptual
 							experiences of living communities as well as a method for
 							exploring the deep-currents of histories and memories that flow
 							through these ancestral lands.
 						</p>
-						<p>
+						<p className='description5'>
 							Sound maps ‘sense’ conditions in space and over time. They can
 							pulsate and radiate—moving acoustic information through the
 							atmospheric mediums of air and the densities of water. They can
 							also bounce bathymetric signals and seismic tremblings from
 							bedrock back to the frozen rock we call ice.
 						</p>
-						<p>
+						<p className='description5'>
 							Sound maps defy the cartographic conventions and logics of the
 							‘line’ that inscribe powerful and violent asymmetries into land;
 							converting relational ecologies into property that can be owned
 							and resources that can be extracted.
 						</p>
-						<p>
+						<p className='description5'>
 							The practice of ‘sounding’ refers both to the taking of depth
 							measurements in a body of water as well as the sourcing of
 							‘evidence’ needed in a preliminary step towards taking action.
@@ -63,30 +63,30 @@ const About = () => {
 							‘sound out’ local expressions and histories of the
 							environment—Earth evidence—and its urgent calls to action.
 						</p>
-						<p>
+						<p className='description5'>
 							<strong>Students:</strong> Andrew Kearns, Bronwyn Butterfield,
 							Gabe McLellan, Grace Bruder, Jove Boutin, Lacey Leforte, Milo
 							Jackson, Sadie Wasylko, Sam Huxley.
 						</p>
-						<p>
+						<p className='description5'>
 							Supported by Yukon School of Visual Arts, the Klondike Institute
 							of Art & Culture (KIAC), Yukon University, with funding support
 							from a Social Science and Humanities Research Council of Canada
 							(SSHRC) Connections Grant / Toronto Biennial of Art.
 						</p>
-						<p>
+						<p className='description5'>
 							Special thanks to Nicole Rayburn and Aubyn O’Grady, both
 							instructors at SOVA and to Faiza Ahmed Khan in Delhi, India, my
 							collaborator on the Listening to Ice research project.
 						</p>
-						<p>
+						<p className='description5'>
 							Project Credits: Drone Footage by John Howland & Bobby XXX.
 							Website designed by Iker Luna.
 						</p>
 
 						<h3>Biographies</h3>
 						<hr></hr>
-						<p>
+						<p className='description5'>
 							<strong>Susan Schuppli</strong> is a researcher and artist based
 							in the UK. Her fieldwork and documentary film practice is situated
 							at the intersections between environmental struggles, climate
@@ -100,13 +100,13 @@ const About = () => {
 							and is author of the book, Material Witness: Media, Forensics,
 							Evidence published by MIT Press in 2020.
 						</p>
-						<p>
+						<p className='description5'>
 							Schuppli is Professor and Director of the{" "}
 							<a
 								href='https://research-architecture.org/'
 								target='_blank'
 								rel='noopener noreferrer'
-								className='glitch-link'
+								className='description5'
 							>
 								Centre for Research Architecture
 							</a>
@@ -116,14 +116,14 @@ const About = () => {
 								href='https://forensic-architecture.org/'
 								target='_blank'
 								rel='noopener noreferrer'
-								className='glitch-link'
+								className='description5'
 							>
 								Forensic Architecture
 							</a>{" "}
 							recipient of the 2024 Right Livelihood Award.
 						</p>
 
-						<p>
+						<p className='description5'>
 							<strong>Nicole Rayburn</strong> is an artist whose practice is a
 							blundering convergence of video, text, and still imagery. Often
 							via appropriation and obsessive repetition, her work humorously
@@ -137,12 +137,12 @@ const About = () => {
 								href='https://www.uwo.ca/visarts/'
 								target='_blank'
 								rel='noopener noreferrer'
-								className='glitch-link'
+								className='description5'
 							>
 								Western University.
 							</a>
 						</p>
-						<p>
+						<p className='description5'>
 							<strong>Iker Luna</strong> is an architect and designer based in
 							Costa Rica whose research explores political repression and
 							state-sponsored violence in Nicaragua as expressed through the
@@ -154,7 +154,7 @@ const About = () => {
 								href='https://www.gold.ac.uk/architecture/programmes/'
 								target='_blank'
 								rel='noopener noreferrer'
-								className='glitch-link'
+								className='description5'
 							>
 								MA in the Centre for Research Architecture at Goldsmiths,
 								University of London.
