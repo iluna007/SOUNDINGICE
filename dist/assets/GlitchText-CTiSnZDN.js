@@ -1,0 +1,1 @@
+import{j as e}from"./react-V8IiPZyx.js";import{P as r}from"./prop-types-D0pSn4ZB.js";const t=({children:s})=>e.jsx("span",{className:"glitch-text",children:s});t.propTypes={children:r.node.isRequired};export{t as G};

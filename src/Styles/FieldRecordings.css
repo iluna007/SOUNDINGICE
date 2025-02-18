@@ -2,16 +2,31 @@
   display: flex;
   gap: 20px;
 }
-
-/* When the offcanvas is open, reserve space (if needed) */
-.offcanvas-open-right .field-recordings-layout {
-  margin-right: 300px;
+.titlefieldrecordings {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bolder;
+  font-size: 10vw; /* Mantén el tamaño grande para el título */
+  margin: 0;
+  line-height: 0.8;
+  text-align: right;
+   /* Ajusta el espacio entre líneas */
 }
 
-/* Filter Sidebar (now transparent so you can see the underlying color) */
-.filter-sidebar {
+/* Columnas con proporciones 1/5, 2/5 y 2/5 respectivamente */
+.left-column {
   flex: 1;
-  max-width: 20%;  /* Approximately 20% */
+}
+
+.center-column {
+  flex: 2;
+}
+
+.right-column {
+  flex: 2;
+}
+
+/* Resto de estilos sin cambios */
+.filter-sidebar {
   padding: 10px;
   background-color: transparent;
   border-radius: 4px;
@@ -36,7 +51,6 @@
 }
 
 .filter-btn {
-  display: inline-block;
   padding: 6px 10px;
   background-color: rgba(224, 224, 224, 0.8);
   border: none;
@@ -53,51 +67,19 @@
   font-weight: bold;
 }
 
-/* Recording list takes 40% (flex: 2) */
 .recording-list {
-  flex: 2;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 5px;
 }
 
-/* Map container takes 40% (flex: 2) and remains visible */
 .map-container {
-  flex: 2;
-  position: sticky; /* Evita sticky que limite la interactividad */
+  position: sticky;
   width: 100%;
   height: 90vh;
   overflow: hidden;
 }
 
-/* Custom scrollbar for scrollable content */
-.scrollable-content {
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  box-sizing: border-box;
-}
-
-.scrollable-content::-webkit-scrollbar {
-  width: 8px;
-}
-.scrollable-content::-webkit-scrollbar-track {
-  background: var(--scrollbar-track, #222);
-}
-.scrollable-content::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb, #555);
-  border-radius: 4px;
-}
-
-/* Center the Material icon in the filter sidebar */
-.icon-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-/* Scroll-to-top button styles */
 .scroll-to-top {
   position: fixed;
   right: 20px;
@@ -119,22 +101,17 @@
   pointer-events: auto;
 }
 
-/* Responsive adjustments: stack vertically on small screens */
 @media (max-width: 768px) {
   .field-recordings-layout {
     flex-direction: column;
   }
-  .filter-sidebar {
-    max-width: 100%;
-    flex: 0 0 auto;
-  }
-  .recording-list,
-  .map-container {
-    flex: none;
-  }
 }
-
-.custom-popup {
-  min-width: 250px;
-  padding: 10px;
+.titlefieldrecordings {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bolder;
+  font-size: 10vw; /* Mantén el tamaño grande para el título */
+  margin: 0;
+  line-height: 0.8;
+  text-align: right;
+   /* Ajusta el espacio entre líneas */
 }

@@ -10,7 +10,7 @@ img.img-fluid {
   margin: 0 auto;
 }
 
-.titleabout {
+.titlefieldworks {
   font-family: "Bebas Neue", sans-serif;
   font-weight: bolder;
   font-size: 10vw; /* Mantén el tamaño grande para el título */
@@ -20,27 +20,26 @@ img.img-fluid {
    /* Ajusta el espacio entre líneas */
 }
 
-.description {
+.description_general {
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 3vw; /* Tamaño más pequeño para la descripción */
+  font-weight: normal;
+  font-size: 1vw; /* Tamaño más pequeño para la descripción */
   margin-top: 1rem;
   display: inline-block; /* Para que el fondo se ajuste al contenido */
-  padding-left: 50px;
-  padding-right: 50px;
-  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   text-align: justify;
-  text-align: right;
+  text-align: left;
 }
-.description2 {
+.subtitles {
   font-family: "Montserrat2", sans-serif;
   font-weight: lighter;
   font-style: italic;
   font-size: 2vw; /* Tamaño más pequeño para la descripción */
   margin-top: 1rem;
   display: inline-block; /* Para que el fondo se ajuste al contenido */
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
   border-radius: 10px;
-  text-align: justify;
+  text-align: left;
 }

@@ -10,7 +10,7 @@ img.img-fluid {
   margin: 0 auto;
 }
 
-.titleabout {
+.titleResource {
   font-family: "Bebas Neue", sans-serif;
   font-weight: bolder;
   font-size: 10vw; /* Mantén el tamaño grande para el título */
@@ -20,17 +20,17 @@ img.img-fluid {
    /* Ajusta el espacio entre líneas */
 }
 
-.description {
+.description4 {
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  font-size: 3vw; /* Tamaño más pequeño para la descripción */
+  font-weight: regular;
+  font-size: 1vw; /* Tamaño más pequeño para la descripción */
   margin-top: 1rem;
   display: inline-block; /* Para que el fondo se ajuste al contenido */
   padding-left: 50px;
   padding-right: 50px;
   border-radius: 10px;
   text-align: justify;
-  text-align: right;
+  text-align: left;
 }
 .description2 {
   font-family: "Montserrat2", sans-serif;

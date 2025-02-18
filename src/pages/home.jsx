@@ -32,7 +32,7 @@ const Home = () => {
 			</div>
 			<div className='content-overlay'>
 				<div className='home-content'>
-					<h1 className='title'>
+					<h1 className='titlehome'>
 						SOUNDING{" "}
 						<Link to='/fieldrecordings' className='glitch-link'>
 							<GlitchText>ICE</GlitchText>
@@ -40,26 +40,9 @@ const Home = () => {
 					</h1>
 					<p className='description'>
 						An acoustic cartography exploring the signals of climate change
-						found in and around the Yukon River—its confluences and histories.
-						Produced in collaboration with students from{" "}
-						<a
-							href='https://yukonsova.net/'
-							target='_blank'
-							rel='noopener noreferrer'
-							className='glitch-link'
-						>
-							<GlitchText>Yukon School of Visual Arts</GlitchText>
-						</a>
-						,
-						<a
-							href='https://dawsoncity.ca/'
-							target='_blank'
-							rel='noopener noreferrer'
-							className='glitch-link'
-						>
-							<GlitchText>Dawson City</GlitchText>
-						</a>
-						, Canada, Winter 2025
+						found in and around the Yukon and Klondike Rivers—their confluences
+						and histories.
+						
 					</p>
 					<p className='description2'>
 						This sound mapping project acknowledges the vital presence of the
