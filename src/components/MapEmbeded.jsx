@@ -5,6 +5,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import store from "../flux/store";
 import { selectRecord } from "../flux/actions";
 import "mapbox-gl/dist/mapbox-gl.css";
+import mlcontour from "maplibre-contour"; // Asegúrate de instalarlo: npm install maplibre-contour
 
 // Configura el token global de Mapbox
 mapboxgl.accessToken =
@@ -18,7 +19,8 @@ const MapEmbed = () => {
 		pitch: 0,
 		bearing: 0,
 		width: "100vh",
-		height: "100vh",
+		height: "100vh", // altura completa de la ventana
+		hash: true,
 	});
 	const [records, setRecords] = useState(store.getAll());
 	const [selectedRecord, setSelectedRecord] = useState(
@@ -37,18 +39,89 @@ const MapEmbed = () => {
 
 	const handleMapLoad = () => {
 		const map = mapRef.current.getMap();
-		map.addSource("mapbox-dem", {
-			type: "raster-dem",
-			url: "mapbox://mapbox.mapbox-terrain-dem-v1",
-			tileSize: 512,
-			maxzoom: 14,
+
+		// Configuración de mlcontour para contornos a partir de un DEM
+		const demSource = new mlcontour.DemSource({
+			url: "https://demotiles.maplibre.org/terrain-tiles/{z}/{x}/{y}.png",
+			encoding: "mapbox",
+			maxzoom: 12,
+			worker: true,
 		});
-		map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
-		map.addLayer({
-			id: "hillshade",
-			source: "mapbox-dem",
-			type: "hillshade",
-		});
+		demSource.setupMaplibre(mapboxgl);
+
+		// Fuente y capa de hillshade basada en mlcontour
+		if (!map.getSource("hillshadeSource")) {
+			map.addSource("hillshadeSource", {
+				type: "raster-dem",
+				tiles: [demSource.sharedDemProtocolUrl],
+				tileSize: 512,
+				maxzoom: 12,
+			});
+		}
+		if (!map.getLayer("hills")) {
+			map.addLayer({
+				id: "hills",
+				type: "hillshade",
+				source: "hillshadeSource",
+				layout: { visibility: "visible" },
+				paint: { "hillshade-exaggeration": 0.25 },
+			});
+		}
+
+		// Fuente y capas de contornos
+		if (!map.getSource("contourSourceFeet")) {
+			map.addSource("contourSourceFeet", {
+				type: "vector",
+				tiles: [
+					demSource.contourProtocolUrl({
+						multiplier: 3.28084, // de metros a pies
+						overzoom: 1,
+						thresholds: {
+							11: [200, 1000],
+							12: [100, 500],
+							13: [100, 500],
+							14: [50, 200],
+							15: [20, 100],
+						},
+						elevationKey: "ele",
+						levelKey: "level",
+						contourLayer: "contours",
+					}),
+				],
+				maxzoom: 15,
+			});
+		}
+		if (!map.getLayer("contours")) {
+			map.addLayer({
+				id: "contours",
+				type: "line",
+				source: "contourSourceFeet",
+				"source-layer": "contours",
+				paint: {
+					"line-opacity": 0.5,
+					"line-width": ["match", ["get", "level"], 1, 1, 0.5],
+				},
+			});
+		}
+		if (!map.getLayer("contour-text")) {
+			map.addLayer({
+				id: "contour-text",
+				type: "symbol",
+				source: "contourSourceFeet",
+				"source-layer": "contours",
+				filter: [">", ["get", "level"], 0],
+				paint: {
+					"text-halo-color": "white",
+					"text-halo-width": 1,
+				},
+				layout: {
+					"symbol-placement": "line",
+					"text-size": 10,
+					"text-field": ["concat", ["number-format", ["get", "ele"], {}], "'"],
+					"text-font": ["Noto Sans Bold"],
+				},
+			});
+		}
 	};
 
 	const handleMarkerClick = (record) => {
@@ -64,7 +137,7 @@ const MapEmbed = () => {
 			onLoad={handleMapLoad}
 			onMove={(evt) => setViewport(evt.viewState)}
 			onError={(error) => console.error("Mapbox error:", error)}
-			interactive={true}
+			interactive
 		>
 			<NavigationControl position='top-right' />
 			{records.map((record) => (
@@ -89,7 +162,7 @@ const MapEmbed = () => {
 					className='custom-popup'
 					latitude={selectedRecord.lat}
 					longitude={selectedRecord.lon}
-					closeButton={true}
+					closeButton
 					closeOnClick={false}
 					onClose={() => selectRecord(null)}
 					offsetTop={-10}
