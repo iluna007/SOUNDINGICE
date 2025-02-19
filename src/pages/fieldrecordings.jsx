@@ -214,9 +214,7 @@ const FieldRecordings = () => {
 						</div>
 					</div>
 					<div className='col-md-5'>
-						<div className='map-container'>
-							<MapEmbed />
-						</div>
+						<MapEmbed />
 					</div>
 				</div>
 			</div>
