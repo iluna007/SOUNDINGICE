@@ -43,12 +43,13 @@
 }
 
 .titlehome {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Arial", sans-serif;
+  font-style: normal;  
   font-weight: bolder;
   font-size: 17vw; /* Mantén el tamaño grande para el título */
-  margin: 0;
+  margin: 5px;
   line-height: 0.8;
-  text-align: justify;
+  text-align: left;
    /* Ajusta el espacio entre líneas */
 }
 

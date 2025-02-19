@@ -45,26 +45,15 @@ const Fieldworks = () => {
 								<h3 className='subtitles'>From Deep Freeze to Thaw</h3>
 								<hr></hr>
 								<p className='description'>
-									The Yukon is already warming at twice the rate of the entire
-									Planet. As temperatures continue to rise, average annual
-									precipitation will increase and become more variable. The
-									impacts of{" "}
-									<a
-										href='https://yukon.ca/en/science-and-natural-resources/research-and-monitoring/climate-change-yukon'
-										target='_blank'
-										rel='noopener noreferrer'
-										className='description_forlinks'
-									>
-										climate change in the Yukon
-									</a>
-									include but are not limited to: permafrost thaw; extreme
-									weather events; changes to snow, ice and water; and changes to
-									vegetation and wildlife. The Yukon and Klondike Rivers will
-									also experience the ravages of warming as river-ice processes
-									are altered affecting ice formation, and creating freeze-up
-									jams. Using our field recorders we attempt to track these
-									signals of climate change across many different scales and
-									contexts.
+									The Yukon is already warming at twice the global average. As
+									temperatures continue to rise, average annual precipitation
+									will increase, becoming more variable. Local impacts will
+									include: permafrost thaw, extreme weather events, changes to
+									snow, ice and water as well as to vegetation and wildlife.
+									River systems will also experience the ravages of warming as
+									ice processes are altered. Using our field recorders we
+									attempt to track signals of climate change across different
+									scales and contexts.
 								</p>
 								<p className='description'>
 									<strong>Equipment used:</strong> LOM Uši pair of
@@ -135,18 +124,25 @@ const Fieldworks = () => {
 								<h3 className='subtitles'>Field Trip</h3>
 								<hr></hr>
 								<p className='description'>
-									Tombstone Territorial Park. This is a 2,200 square kilometres
-									protected and unique wilderness of rugged peaks, permafrost
-									landforms and abundant wildlife, all reflected in a rich First
-									Nations culture. The area's Hän name Ddhäl Ch'èl Cha Nän means
-									"ragged mountain land." The park is a legacy of the Tr'ondëk
-									Hwëch'in Land Claim Agreement and lies within their
-									Traditional Territory. The Dempster Highway bisects the park
-									and provides an opportunity to view stunning arctic tundra
-									landscapes and wildlife and access to hiking areas. The
-									concentration of wide ecological niches has resulted in a
-									diverse collection of flora and fauna uncommon at this
-									latitude.
+									<a
+										href='https://yukon.ca/en/outdoor-recreation-and-wildlife/parks-and-protected-areas/tombstone-territorial-park'
+										target='_blank'
+										rel='noopener noreferrer'
+										className='description_forlinks'
+									>
+										Tombstone Territorial Park.
+									</a>
+									This is a 2,200 square kilometres protected and unique
+									wilderness of rugged peaks, permafrost landforms and abundant
+									wildlife, all reflected in a rich First Nations culture. The
+									area's Hän name Ddhäl Ch'èl Cha Nän means "ragged mountain
+									land." The park is a legacy of the Tr'ondëk Hwëch'in Land
+									Claim Agreement and lies within their Traditional Territory.
+									The Dempster Highway bisects the park and provides an
+									opportunity to view stunning arctic tundra landscapes and
+									wildlife and access to hiking areas. The concentration of wide
+									ecological niches has resulted in a diverse collection of
+									flora and fauna uncommon at this latitude.
 								</p>
 							</div>
 						</div>

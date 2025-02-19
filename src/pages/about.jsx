@@ -77,7 +77,7 @@ const About = () => {
 								collaborator on the Listening to Ice research project.
 							</p>
 							<p className='description'>
-								Project Credits: Drone Footage by John Howland & Bobby XXX.
+								Project Credits: Drone Footage by John Howland & Bobby Ronka.
 								Website designed by Iker Luna.
 							</p>
 						</div>
