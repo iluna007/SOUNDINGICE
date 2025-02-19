@@ -34,7 +34,10 @@ const Home = () => {
 				<div className='home-content'>
 					<h1 className='titlehome'>
 						SOUNDING{" "}
-						<Link to='/fieldrecordings' className='glitch-link'>
+						<Link
+							to='/fieldrecordings'
+							style={{ textDecoration: "none", color: "inherit" }}
+						>
 							<GlitchText>ICE</GlitchText>
 						</Link>
 					</h1>

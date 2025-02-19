@@ -30,6 +30,7 @@ const GlitchText = ({ children }) => {
 	return (
 		<span
 			className='glitch-text'
+			data-text={children}
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 			onClick={handleClick}

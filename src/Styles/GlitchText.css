@@ -1,14 +1,14 @@
-/* GlitchText.css */
+ 
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
-/* Estilo base */
 .glitch-text {
   position: relative;
   display: inline-block;
-  color: #ffffff; /* Texto en blanco */
+  color: #ffffff;
   transition: all 0.1s ease;
+  z-index: 1;
 }
 
-/* Pseudo-elemento para efecto wave */
 .glitch-text::before {
   content: attr(data-text);
   position: absolute;
@@ -17,9 +17,9 @@
   color: inherit;
   opacity: 0;
   pointer-events: none;
+  z-index: -1;
 }
 
-/* Pseudo-elemento para efecto 3D noise distortion */
 .glitch-text::after {
   content: attr(data-text);
   position: absolute;
@@ -28,9 +28,9 @@
   color: inherit;
   opacity: 0;
   pointer-events: none;
+  z-index: -1;
 }
 
-/* Activación de animaciones al hacer hover */
 .glitch-text:hover {
   animation: glitch 0.2s linear infinite, crack 0.3s linear infinite;
 }
@@ -45,7 +45,6 @@
   animation: noise3d 0.4s linear infinite;
 }
 
-/* Animación de glitch con sombras de color */
 @keyframes glitch {
   0% {
     text-shadow: 1.75px 1.75px #00ffff, -1.75px -1.75px #ff00ff88, 2.5px -2.5px #ffff007d;
@@ -67,7 +66,6 @@
   }
 }
 
-/* Animación de crack (distorsión tipo fractura) */
 @keyframes crack {
   0% {
     transform: none;
@@ -86,7 +84,6 @@
   }
 }
 
-/* Animación wave que simula una distorsión de ondas sonoras */
 @keyframes wave {
   0% {
     transform: translate(0, 0);
@@ -105,7 +102,6 @@
   }
 }
 
-/* Animación noise3d para simular distorsión 3D tipo ruido */
 @keyframes noise3d {
   0% {
     transform: perspective(1000px) translate3d(0, 0, 0);
