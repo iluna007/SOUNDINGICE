@@ -39,13 +39,18 @@ const Resources = () => {
 								International Journal of River Basin Management, 21(3), 2022:
 								421–441.
 							</li>
+
 							<li>
-								<strong>Julie Cruikshank.</strong> “Are Glaciers ‘Good to Think
-								With’? Recognising Indigenous Environmental Knowledge.”
-								Anthropological Forum 22(3), 2012: 239–50.
-							</li>
-							<li>
-								<strong>Julie Cruikshank.</strong>{" "}
+								<strong>
+									<a
+										href='https://anth.ubc.ca/profile/julie-cruikshank/'
+										target='_blank'
+										rel='noopener noreferrer'
+										className='description_forlinks'
+									>
+										Julie Cruikshank.
+									</a>
+								</strong>{" "}
 								<em>
 									Do Glaciers Listen? Local Knowledge, Colonial Encounters and
 									Social Imagination.
@@ -53,15 +58,30 @@ const Resources = () => {
 								Vancouver: UBC Press, 2005.
 							</li>
 							<li>
-								<strong>A. Farina, A. Eldridge and P. Li.</strong> “Ecoacoustics
-								and Multispecies Semiosis: Naming, Semantics, Semiotic
-								Characteristics, and Competencies” in Biosemiotics, 14, 2022:
-								141–165.
+								<strong>A. Farina, A. Eldridge and P. Li.</strong>
+								<a
+									href='https://anth.ubc.ca/profile/julie-cruikshank/Ecoacoustics'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='description_forlinks'
+								>
+									“Ecoacoustics and Multispecies Semiosis: Naming, Semantics,
+									Semiotic Characteristics, and Competencies”{" "}
+								</a>
+								in Biosemiotics, 14, 2022: 141-165. .
 							</li>
 							<li>
-								<strong>Steven Feld.</strong> “Acoustemology: in Keywords in
-								Sound”, eds. D. Novak &amp; M. Sakakeeny, Duke University Press
-								2015.
+								<strong>Steven Feld.</strong> “
+								<a
+									href='https://anth.ubc.ca/profile/julie-cruikshank/Ecoacoustics'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='description_forlinks'
+								>
+									Acoustemology
+								</a>
+								” in Keywords in Sound, eds. D. Novak & M. Sakakeeny, Duke
+								University Press 2015.
 							</li>
 							<li>
 								<strong>Michael Gates.</strong>{" "}
@@ -77,12 +97,21 @@ const Resources = () => {
 								International Symposium on Ice (Trondheim, 2020).
 							</li>
 							<li>
-								<strong>Mark Peter Wright.</strong>{" "}
+								<strong>
+									<a
+										href='https://markpeterwright.net/'
+										target='_blank'
+										rel='noopener noreferrer'
+										className='description_forlinks'
+									>
+										Mark Peter Wright.
+									</a>
+								</strong>{" "}
 								<em>
 									Listening after Nature: Field Recording, Ecology, Critical
 									Practice.
 								</em>{" "}
-								London: Bloomsbury Academic, 2022.
+								London: BlooAmsbury Academic, 2022.
 							</li>
 							<li>
 								<strong>
@@ -110,7 +139,7 @@ const Resources = () => {
 									rel='noopener noreferrer'
 									className='description_forlinks'
 								>
-									Learning to Listen.
+									Learning to Listen
 								</a>
 							</li>
 							<li>
@@ -123,21 +152,37 @@ const Resources = () => {
 									Anja Kanngieser
 								</a>{" "}
 								– Geographer and sound artist exploring listening and attunement
-								to the relations between people, place, and ecologies.
+								to the relations between people, place, and ecologies
 							</li>
 							<li>
-								Philip Samartzis –{" "}
+								<a
+									href='https://bogongsound.com.au/artists/philip-samartzis'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='description_forlinks'
+								>
+									Philip Samartzis
+								</a>
+								–{" "}
 								<a
 									href='https://index.bogongsound.com.au/'
 									target='_blank'
 									rel='noopener noreferrer'
 									className='description_forlinks'
 								>
-									The Bogong High Plains Sound Map.
+									The Bogong High Plains Sound Map
 								</a>
 							</li>
 							<li>
-								Jana Winderen –{" "}
+								<a
+									href='https://www.janawinderen.com/'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='description_forlinks'
+								>
+									Jana Winderen
+								</a>
+								–{" "}
 								<a
 									href='https://www.youtube.com/watch?v=xCYN6IovKvc'
 									target='_blank'
@@ -147,7 +192,28 @@ const Resources = () => {
 									The Wanderer
 								</a>
 								, a sound composition from hydrophone recordings of zooplankton
-								and phytoplankton in the Atlantic Ocean.
+								and phytoplankton in the Atlantic Ocean
+							</li>
+							<li>
+								<a
+									href='https://scholar.yukonu.ca/bturcotte/blog/'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='description_forlinks'
+								>
+									Fascinating Ice, dangerous ice and other Yukon river blog
+									posts
+								</a>
+							</li>
+							<li>
+								<a
+									href='https://www.yukonu.ca/research/climate-change-research/breakup-forecasting'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='description_forlinks'
+								>
+									Forecasting River Ice Breakup in Yukon Communities
+								</a>
 							</li>
 							<li>
 								<a
@@ -156,7 +222,7 @@ const Resources = () => {
 									rel='noopener noreferrer'
 									className='description_forlinks'
 								>
-									Polyphony Project.
+									Polyphony Project
 								</a>
 							</li>
 							<li>
@@ -167,7 +233,7 @@ const Resources = () => {
 									rel='noopener noreferrer'
 									className='description_forlinks'
 								>
-									Quantum Listening.
+									Quantum Listening
 								</a>
 							</li>
 							<li>
@@ -177,7 +243,7 @@ const Resources = () => {
 									rel='noopener noreferrer'
 									className='description_forlinks'
 								>
-									Rainforest Connection.
+									Rainforest Connection
 								</a>
 							</li>
 						</ul>
@@ -214,6 +280,16 @@ const Resources = () => {
 									className='description_forlinks'
 								>
 									Dawson City Film Fest
+								</a>
+							</li>
+							<li>
+								<a
+									href='https://www.yukoncouncilofarchives.ca/dcm'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='description_forlinks'
+								>
+									Dawson City Museum + Klondike History Library & Archives
 								</a>
 							</li>
 							<li>
