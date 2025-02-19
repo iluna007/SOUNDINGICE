@@ -83,15 +83,23 @@ const FieldRecordings = () => {
 	const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
 	return (
-		<div className='field-recordings-page'>
-			<div>
-				<h2 className='titlefieldrecordings'>Field Recordings</h2>
-			</div>
-			<div className='field-recordings-layout'>
-				<div className='left-column'>
-					<div className='filter-sidebar'>
+		<div className='container-fluid'>
+			<div
+				className='mt-6'
+				style={{
+					textAlign: "justify",
+					paddingTop: "48px",
+					paddingBottom: "24px",
+					paddingLeft: "32px",
+					paddingRight: "32px",
+				}}
+			>
+				<h2 className='title'>Field Recordings</h2>
+				<div className='row mt-5'>
+					<div className='col-md-2'>
+						<h3 className='subtitles'>Recordist</h3>
+						<hr></hr>
 						<div className='filter-group'>
-							<h3>Recordist</h3>
 							<div className='buttons'>
 								<button
 									className={`filter-btn ${!filters.recordist ? "active" : ""}`}
@@ -112,8 +120,9 @@ const FieldRecordings = () => {
 								))}
 							</div>
 						</div>
+						<h3 className='subtitles'>Key Words</h3>
+						<hr></hr>
 						<div className='filter-group'>
-							<h3>Key Words</h3>
 							<div className='buttons'>
 								<button
 									className={`filter-btn ${!filters.tags ? "active" : ""}`}
@@ -134,8 +143,9 @@ const FieldRecordings = () => {
 								))}
 							</div>
 						</div>
+						<h3 className='subtitles'>Conditions</h3>
+						<hr></hr>
 						<div className='filter-group'>
-							<h3>Conditions</h3>
 							<div className='buttons'>
 								<button
 									className={`filter-btn ${
@@ -158,8 +168,9 @@ const FieldRecordings = () => {
 								))}
 							</div>
 						</div>
+						<h3 className='subtitles'>Date</h3>
+						<hr></hr>
 						<div className='filter-group'>
-							<h3>Date</h3>
 							<div className='buttons'>
 								<button
 									className={`filter-btn ${!filters.date ? "active" : ""}`}
@@ -181,35 +192,35 @@ const FieldRecordings = () => {
 							</div>
 						</div>
 					</div>
-				</div>
-				<div className='center-column'>
-					<div className='recording-list'>
-						{filteredRecords.length > 0 ? (
-							filteredRecords.map((record) => (
-								<RecordingCard
-									key={record.id}
-									record={record}
-									expanded={expandedCard && expandedCard.id === record.id}
-									viewMode={
-										expandedCard && expandedCard.id === record.id
-											? expandedCard.view
-											: null
-									}
-									onToggle={handleToggleCard}
-								/>
-							))
-						) : (
-							<p>No recordings available.</p>
-						)}
+					<div className='col-md-5'>
+						<div className='recording-list'>
+							{filteredRecords.length > 0 ? (
+								filteredRecords.map((record) => (
+									<RecordingCard
+										key={record.id}
+										record={record}
+										expanded={expandedCard && expandedCard.id === record.id}
+										viewMode={
+											expandedCard && expandedCard.id === record.id
+												? expandedCard.view
+												: null
+										}
+										onToggle={handleToggleCard}
+									/>
+								))
+							) : (
+								<p>No recordings available.</p>
+							)}
+						</div>
 					</div>
-				</div>
-				<div className='right-column'>
-					<div className='map-container'>
-						<MapEmbed />
+					<div className='col-md-5'>
+						<div className='map-container'>
+							<MapEmbed />
+						</div>
 					</div>
 				</div>
 			</div>
-			
+
 			<button
 				className={`scroll-to-top ${showTopBtn ? "show" : ""}`}
 				onClick={scrollToTop}

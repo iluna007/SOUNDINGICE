@@ -14,11 +14,11 @@ const MapEmbed = () => {
 	const [viewport, setViewport] = useState({
 		latitude: 64.049004,
 		longitude: -139.442815,
-		zoom: 12.96,
-		pitch: 62.11,
+		zoom: 6.5,
+		pitch: 0,
 		bearing: 0,
 		width: "100vh",
-		height: "100%",
+		height: "100vh",
 	});
 	const [records, setRecords] = useState(store.getAll());
 	const [selectedRecord, setSelectedRecord] = useState(
@@ -44,6 +44,11 @@ const MapEmbed = () => {
 			maxzoom: 14,
 		});
 		map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
+		map.addLayer({
+			id: "hillshade",
+			source: "mapbox-dem",
+			type: "hillshade",
+		});
 	};
 
 	const handleMarkerClick = (record) => {
@@ -54,14 +59,14 @@ const MapEmbed = () => {
 		<ReactMapGL
 			ref={mapRef}
 			{...viewport}
-			mapStyle='mapbox://styles/ikerluna/cm76812yz01va01qx4nvo4nf3'
+			mapStyle='mapbox://styles/ikerluna/cm7b6ykln005d01s7fdffhda4'
 			mapboxApiAccessToken={mapboxgl.accessToken}
 			onLoad={handleMapLoad}
 			onMove={(evt) => setViewport(evt.viewState)}
 			onError={(error) => console.error("Mapbox error:", error)}
 			interactive={true}
 		>
-			<NavigationControl position='top-left' />
+			<NavigationControl position='top-right' />
 			{records.map((record) => (
 				<Marker key={record.id} latitude={record.lat} longitude={record.lon}>
 					<div

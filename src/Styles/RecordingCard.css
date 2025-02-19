@@ -3,7 +3,7 @@
   border-radius: 8px;
   overflow: hidden;
   width: 100%;
-  max-width: 300px;
+  max-width: 275px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   background-color: #fff;
@@ -42,9 +42,13 @@
 }
 
 .recording-id {
-  font-size: 22px;
-  color: #333;
-  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.1vw; /* Tamaño más pequeño para la descripción */
+  display: inline-block; /* Para que el fondo se ajuste al contenido */
+  text-align: justify;
+  text-align: left;
+  color: inherit;
 }
 
 /* Detalles completos (modo expandido) */
@@ -53,16 +57,23 @@
 }
 
 .recording-details h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.1vw;
   margin: 0 0 10px;
   font-size: 18px;
   color: #333;
 }
 
 .recording-details p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 1.1vw;
   margin: 5px 0;
   font-size: 14px;
   color: #555;
 }
+
 
 audio {
   width: 100%;
