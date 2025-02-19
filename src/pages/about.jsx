@@ -105,7 +105,7 @@ const About = () => {
 									href='https://research-architecture.org/'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_about'
 								>
 									Centre for Research Architecture
 								</a>
@@ -115,7 +115,7 @@ const About = () => {
 									href='https://forensic-architecture.org/'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_about'
 								>
 									Forensic Architecture
 								</a>{" "}
@@ -136,7 +136,7 @@ const About = () => {
 									href='https://www.uwo.ca/visarts/'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_about'
 								>
 									Western University.
 								</a>
@@ -153,7 +153,7 @@ const About = () => {
 									href='https://www.gold.ac.uk/architecture/programmes/'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_about'
 								>
 									MA in the Centre for Research Architecture at Goldsmiths,
 									University of London.

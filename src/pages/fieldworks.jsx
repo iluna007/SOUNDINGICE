@@ -84,7 +84,7 @@ const Fieldworks = () => {
 										href='https://www.gresham.ac.uk/watch-now/sounds-universe'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='description_forlinks'
+										className='description_forlinks_fieldworks'
 									>
 										Astronomer Caroline Crawford on the sounds of the universe.
 									</a>
@@ -128,7 +128,7 @@ const Fieldworks = () => {
 										href='https://yukon.ca/en/outdoor-recreation-and-wildlife/parks-and-protected-areas/tombstone-territorial-park'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='description_forlinks'
+										className='description_forlinks_fieldworks'
 									>
 										Tombstone Territorial Park.
 									</a>

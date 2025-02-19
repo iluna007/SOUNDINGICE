@@ -27,7 +27,7 @@ const Resources = () => {
 									href='https://www.iahr.org/library/infor?pid=8556'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Proceedings of the 25th IAHR International Symposium on Ice
 									(Trondheim, 2020).
@@ -46,7 +46,7 @@ const Resources = () => {
 										href='https://anth.ubc.ca/profile/julie-cruikshank/'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='description_forlinks'
+										className='description_forlinks_resources'
 									>
 										Julie Cruikshank.
 									</a>
@@ -63,7 +63,7 @@ const Resources = () => {
 									href='https://anth.ubc.ca/profile/julie-cruikshank/Ecoacoustics'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									“Ecoacoustics and Multispecies Semiosis: Naming, Semantics,
 									Semiotic Characteristics, and Competencies”{" "}
@@ -76,7 +76,7 @@ const Resources = () => {
 									href='https://anth.ubc.ca/profile/julie-cruikshank/Ecoacoustics'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Acoustemology
 								</a>
@@ -102,7 +102,7 @@ const Resources = () => {
 										href='https://markpeterwright.net/'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='description_forlinks'
+										className='description_forlinks_resources'
 									>
 										Mark Peter Wright.
 									</a>
@@ -119,7 +119,7 @@ const Resources = () => {
 										href='https://www.yukonu.ca/sites/default/files/inline-files/Compendium%202021.pdf'
 										target='_blank'
 										rel='noopener noreferrer'
-										className='description_forlinks'
+										className='description_forlinks_resources'
 									>
 										Yukon Climate Change Compendium 2021.
 									</a>
@@ -137,7 +137,7 @@ const Resources = () => {
 									href='https://www.youtube.com/watch?v=R3KxzxIKsXI'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Learning to Listen
 								</a>
@@ -147,7 +147,7 @@ const Resources = () => {
 									href='https://amkanngieser.com/'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Anja Kanngieser
 								</a>{" "}
@@ -159,7 +159,7 @@ const Resources = () => {
 									href='https://bogongsound.com.au/artists/philip-samartzis'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Philip Samartzis
 								</a>
@@ -168,7 +168,7 @@ const Resources = () => {
 									href='https://index.bogongsound.com.au/'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									The Bogong High Plains Sound Map
 								</a>
@@ -178,7 +178,7 @@ const Resources = () => {
 									href='https://www.janawinderen.com/'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Jana Winderen
 								</a>
@@ -187,7 +187,7 @@ const Resources = () => {
 									href='https://www.youtube.com/watch?v=xCYN6IovKvc'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									The Wanderer
 								</a>
@@ -199,7 +199,7 @@ const Resources = () => {
 									href='https://scholar.yukonu.ca/bturcotte/blog/'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Fascinating Ice, dangerous ice and other Yukon river blog
 									posts
@@ -210,7 +210,7 @@ const Resources = () => {
 									href='https://www.yukonu.ca/research/climate-change-research/breakup-forecasting'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Forecasting River Ice Breakup in Yukon Communities
 								</a>
@@ -220,7 +220,7 @@ const Resources = () => {
 									href='https://www.polyphonyproject.com/en'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Polyphony Project
 								</a>
@@ -231,7 +231,7 @@ const Resources = () => {
 									href='https://www.library.ignota.org/book/quantum-listening/'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Quantum Listening
 								</a>
@@ -241,7 +241,7 @@ const Resources = () => {
 									href='https://rfcx.org/'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Rainforest Connection
 								</a>
@@ -257,7 +257,7 @@ const Resources = () => {
 									href='https://coldcutsvideofestival.wordpress.com/'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Cold Cuts Video Festival
 								</a>
@@ -267,7 +267,7 @@ const Resources = () => {
 									href='https://cripe.ca/'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Committee on River Ice Processes and the Environment
 								</a>
@@ -277,7 +277,7 @@ const Resources = () => {
 									href='https://www.dawsonfilmfest.com/about.html'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Dawson City Film Fest
 								</a>
@@ -287,7 +287,7 @@ const Resources = () => {
 									href='https://www.yukoncouncilofarchives.ca/dcm'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Dawson City Museum + Klondike History Library & Archives
 								</a>
@@ -297,7 +297,7 @@ const Resources = () => {
 									href='http://dawson.meteomac.com/'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Dawson weather station
 								</a>
@@ -307,7 +307,7 @@ const Resources = () => {
 									href='https://kiac.ca/'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Klondike Institute of Art &amp; Culture (KIAC)
 								</a>
@@ -317,7 +317,7 @@ const Resources = () => {
 									href='https://www.yukonu.ca/programs/continuing-studies/climate-change'
 									target='_blank'
 									rel='noopener noreferrer'
-									className='description_forlinks'
+									className='description_forlinks_resources'
 								>
 									Yukon University / The Climate Change Research Program
 								</a>

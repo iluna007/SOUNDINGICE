@@ -30,7 +30,7 @@ img.img-fluid {
   color: inherit;
 }
 
-.description_forlinks {
+.description_forlinks_about {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 1.1vw; /* Tamaño más pequeño para la descripción */
@@ -43,7 +43,7 @@ img.img-fluid {
 
 
 
-.description_forlinks:hover {
+.description_forlinks_about:hover {
   color: white;
 }
 

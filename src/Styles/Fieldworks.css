@@ -39,7 +39,7 @@ img.img-fluid {
   color: inherit;
 }
 
-.description_forlinks {
+.description_forlinks_fieldworks {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 1.1vw; /* Tamaño más pequeño para la descripción */
@@ -50,7 +50,7 @@ img.img-fluid {
   text-decoration: none;
 }
 
-.description_forlinks:hover {
+.description_forlinks_fieldworks:hover {
   color: yellow;
 }
 
