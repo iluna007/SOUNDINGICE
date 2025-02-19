@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 import "./Styles/Layout.css";
 
 // Define our five pages with routes, colors and Material icon names.
@@ -17,7 +18,6 @@ const pages = [
 		color: "#ff00ff",
 		icon: "asterisk",
 	},
-
 	{
 		title: "Resources",
 		route: "/resources",
@@ -157,3 +157,7 @@ export default function Layout({ children }) {
 		</div>
 	);
 }
+
+Layout.propTypes = {
+	children: PropTypes.node.isRequired,
+};
