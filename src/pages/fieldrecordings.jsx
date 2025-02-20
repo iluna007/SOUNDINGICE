@@ -3,6 +3,7 @@ import store from "../flux/store";
 import { fetchData1 } from "../flux/actions";
 import RecordingCard from "../components/RecordingCard";
 import MapEmbed from "../components/MapEmbeded";
+import Masonry from "react-masonry-css";
 import "../Styles/FieldRecordings.css";
 
 const FieldRecordings = () => {
@@ -14,7 +15,6 @@ const FieldRecordings = () => {
 		date: "",
 	});
 	const [filteredRecords, setFilteredRecords] = useState([]);
-	const [showTopBtn, setShowTopBtn] = useState(false);
 	const [expandedCard, setExpandedCard] = useState(null);
 
 	const handleUpdate = useCallback(() => {
@@ -74,13 +74,12 @@ const FieldRecordings = () => {
 		}
 	};
 
-	useEffect(() => {
-		const handleScroll = () => setShowTopBtn(window.pageYOffset > 300);
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
-	}, []);
-
-	const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+	// Define los puntos de quiebre para el masonry de tarjetas
+	const breakpointColumnsObj = {
+		default: 3,
+		1100: 2,
+		700: 1,
+	};
 
 	return (
 		<div className='container-fluid'>
@@ -98,7 +97,7 @@ const FieldRecordings = () => {
 				<div className='row mt-5'>
 					<div className='col-md-2'>
 						<h3 className='subtitles'>Recordist</h3>
-						<hr></hr>
+						<hr />
 						<div className='filter-group'>
 							<div className='buttons'>
 								<button
@@ -121,7 +120,7 @@ const FieldRecordings = () => {
 							</div>
 						</div>
 						<h3 className='subtitles'>Key Words</h3>
-						<hr></hr>
+						<hr />
 						<div className='filter-group'>
 							<div className='buttons'>
 								<button
@@ -144,7 +143,7 @@ const FieldRecordings = () => {
 							</div>
 						</div>
 						<h3 className='subtitles'>Conditions</h3>
-						<hr></hr>
+						<hr />
 						<div className='filter-group'>
 							<div className='buttons'>
 								<button
@@ -169,7 +168,7 @@ const FieldRecordings = () => {
 							</div>
 						</div>
 						<h3 className='subtitles'>Date</h3>
-						<hr></hr>
+						<hr />
 						<div className='filter-group'>
 							<div className='buttons'>
 								<button
@@ -195,37 +194,44 @@ const FieldRecordings = () => {
 					<div className='col-md-5'>
 						<div className='recording-list'>
 							{filteredRecords.length > 0 ? (
-								filteredRecords.map((record) => (
-									<RecordingCard
-										key={record.id}
-										record={record}
-										expanded={expandedCard && expandedCard.id === record.id}
-										viewMode={
-											expandedCard && expandedCard.id === record.id
-												? expandedCard.view
-												: null
-										}
-										onToggle={handleToggleCard}
-									/>
-								))
+								<Masonry
+									breakpointCols={breakpointColumnsObj}
+									className='my-masonry-grid'
+									columnClassName='my-masonry-grid_column'
+								>
+									{filteredRecords.map((record) => (
+										<RecordingCard
+											key={record.id}
+											record={record}
+											expanded={expandedCard && expandedCard.id === record.id}
+											viewMode={
+												expandedCard && expandedCard.id === record.id
+													? expandedCard.view
+													: null
+											}
+											onToggle={handleToggleCard}
+										/>
+									))}
+								</Masonry>
 							) : (
 								<p>No recordings available.</p>
 							)}
 						</div>
 					</div>
 					<div className='col-md-5'>
-						<MapEmbed />
+						{/* MapEmbed envuelto en Masonry, pero limitado a su contenedor asignado */}
+						<Masonry
+							breakpointCols={{ default: 1 }}
+							className='my-masonry-grid'
+							columnClassName='my-masonry-grid_column'
+						>
+							<div className='map-masonry-item'>
+								<MapEmbed />
+							</div>
+						</Masonry>
 					</div>
 				</div>
 			</div>
-
-			<button
-				className={`scroll-to-top ${showTopBtn ? "show" : ""}`}
-				onClick={scrollToTop}
-				aria-label='Scroll to top'
-			>
-				↑
-			</button>
 		</div>
 	);
 };

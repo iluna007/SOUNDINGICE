@@ -9,11 +9,14 @@ const datadummy = [
 		temperature: "-35°C",
 		conditions: "Clear",
 		tags: "Field Recording",
-		// URL original del audio
 		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316582/Hornshund_Underwater_c7abfh.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055290/Yukon_River_2_fbi0r9.jpg",
+		field_notes: [
+			"The sound of cracking ice echoed through the quiet landscape.",
+			"The delicate balance of the frozen river reminded us of nature's transient beauty.",
+		],
 	},
 	{
 		id: 2,
@@ -29,6 +32,10 @@ const datadummy = [
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Iceberg_Calving_-_Hansbreen_Glacier_r1gewz.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055289/field_recording_2_xan6ng.jpg",
+		field_notes: [
+			"Clouds whispered ancient tales as they drifted over the river.",
+			"The overcast sky added a layer of melancholy to the scene.",
+		],
 	},
 	{
 		id: 3,
@@ -44,6 +51,10 @@ const datadummy = [
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Belcher_Glacier_knpuil.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055289/students_working_5_a43l75.jpg",
+		field_notes: [
+			"The sound of flowing water blended with the chill of the glacier.",
+			"The interplay between ice and water created a natural symphony.",
+		],
 	},
 	{
 		id: 4,
@@ -59,6 +70,10 @@ const datadummy = [
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Grant_Deane_Records_Melting_Ice_xn4mp2.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055290/Yukon_River_1_wsuiqa.jpg",
+		field_notes: [
+			"Snow fell silently, framing the winter scene.",
+			"Each flake seemed to whisper secrets of the mountain.",
+		],
 	},
 	{
 		id: 5,
@@ -74,6 +89,10 @@ const datadummy = [
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316582/Hornshund_Underwater_c7abfh.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055289/Tombstone_Park_4_l7hfui.jpg",
+		field_notes: [
+			"The vast park unfolded with timeless grandeur.",
+			"The rustling wind among the pines evoked a mystical aura.",
+		],
 	},
 	{
 		id: 6,
@@ -89,6 +108,10 @@ const datadummy = [
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316582/Hornshund_Underwater_c7abfh.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055288/field_recording_3_gulz7r.jpg",
+		field_notes: [
+			"Rain intensified the feeling of isolation.",
+			"Each drop marked the passage of time in the urban landscape.",
+		],
 	},
 	{
 		id: 7,
@@ -104,6 +127,10 @@ const datadummy = [
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Iceberg_Calving_-_Hansbreen_Glacier_r1gewz.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055288/Tombstone_Park_3_zieofz.jpg",
+		field_notes: [
+			"The park revealed a unique palette of colors.",
+			"Clouds intensified the dramatic character of the landscape.",
+		],
 	},
 	{
 		id: 8,
@@ -119,6 +146,10 @@ const datadummy = [
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Belcher_Glacier_knpuil.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055288/Tombstone_Park_1_crjb7h.jpg",
+		field_notes: [
+			"Rain softened the textures of the surroundings.",
+			"The atmosphere was imbued with a calm melancholy.",
+		],
 	},
 	{
 		id: 9,
@@ -134,6 +165,10 @@ const datadummy = [
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Grant_Deane_Records_Melting_Ice_xn4mp2.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055288/drilling_river_ice_ya1yvt.jpg",
+		field_notes: [
+			"The murmur of the river complemented the crisp air.",
+			"The contrast between ice and water painted a dynamic scene.",
+		],
 	},
 	{
 		id: 10,
@@ -149,6 +184,10 @@ const datadummy = [
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Grant_Deane_Records_Melting_Ice_xn4mp2.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055293/students_working_2_ibr7vr.jpg",
+		field_notes: [
+			"Snow transformed the landscape into a blank canvas.",
+			"The cold merged with the vibrant energy of the scene.",
+		],
 	},
 	{
 		id: 11,
@@ -164,6 +203,10 @@ const datadummy = [
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Belcher_Glacier_knpuil.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055282/Yukon_River-5_faolxu.jpg",
+		field_notes: [
+			"The recording captured the clarity of a bright day.",
+			"Every sound was amplified in the vast openness of the landscape.",
+		],
 	},
 	{
 		id: 12,
@@ -179,6 +222,10 @@ const datadummy = [
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Iceberg_Calving_-_Hansbreen_Glacier_r1gewz.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055281/Yukon_River_4_hlp5dg.jpg",
+		field_notes: [
+			"The clear sky highlighted the purity of the natural setting.",
+			"The transparency of the day created an almost ethereal atmosphere.",
+		],
 	},
 	{
 		id: 13,
@@ -194,6 +241,10 @@ const datadummy = [
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316582/Hornshund_Underwater_c7abfh.mp3",
 		pictureFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/image/upload/v1739055291/Yukon_River_3_xoonfg.jpg",
+		field_notes: [
+			"The soundscape revealed a delicate balance of nature.",
+			"Silence and subtle sounds merged to form a harmonious whole.",
+		],
 	},
 ];
 

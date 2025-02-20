@@ -27,6 +27,8 @@ const pages = [
 	{ title: "About", route: "/about", color: "#00ffff", icon: "info" },
 ];
 
+
+
 // Define darker scrollbar colors for each background.
 const scrollbarColors = {
 	"#ffffff": { track: "#dddddd", thumb: "#bbbbbb" },
@@ -152,6 +154,7 @@ export default function Layout({ children }) {
 							</div>
 						)}
 					</div>
+					
 				);
 			})}
 		</div>

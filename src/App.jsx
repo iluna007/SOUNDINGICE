@@ -24,9 +24,9 @@ const App = () => {
 						<Route path='/resources' element={<Resources />} />
 						<Route path='/about' element={<About />} />
 					</Routes>
+					<ScrollToTopButton />
 				</Layout>
 			</Suspense>
-			<ScrollToTopButton />
 		</div>
 	);
 };

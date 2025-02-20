@@ -18,8 +18,8 @@ const MapEmbed = () => {
 		zoom: 6.5,
 		pitch: 0,
 		bearing: 0,
-		width: "100vh",
-		height: "100vh", // altura completa de la ventana
+		width: "100%",
+		height: "100%", // altura completa de la ventana
 		hash: true,
 	});
 	const [records, setRecords] = useState(store.getAll());
