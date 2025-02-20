@@ -2,6 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { selectRecord } from "../flux/actions";
 import "../Styles/RecordingCard.css";
 
 const RecordingCard = ({ record }) => {
@@ -13,7 +14,11 @@ const RecordingCard = ({ record }) => {
 	};
 
 	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
+	const handleShow = () => {
+		// Update the selected record so the map can fly to its location
+		selectRecord(record);
+		setShow(true);
+	};
 
 	return (
 		<div
@@ -66,13 +71,12 @@ const RecordingCard = ({ record }) => {
 				</div>
 			)}
 
-			{/* Offcanvas component */}
 			<Offcanvas show={show} onHide={handleClose} backdrop='static'>
 				<Offcanvas.Header closeButton>
-					<Offcanvas.Title>Field Notes for:  {record.id}</Offcanvas.Title>
+					<Offcanvas.Title>Field Notes for: {record.id}</Offcanvas.Title>
 				</Offcanvas.Header>
 				<Offcanvas.Body>
-					<p >
+					<p>
 						<strong>Recordist:</strong> {record.recordist}
 					</p>
 					<p>

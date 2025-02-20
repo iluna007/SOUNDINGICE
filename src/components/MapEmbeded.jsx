@@ -1,13 +1,13 @@
 import { useEffect, useState, useRef } from "react";
 import ReactMapGL, { Marker, Popup, NavigationControl } from "react-map-gl";
 import mapboxgl from "mapbox-gl";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaMapMarker } from "react-icons/fa";
 import store from "../flux/store";
 import { selectRecord } from "../flux/actions";
 import "mapbox-gl/dist/mapbox-gl.css";
-import mlcontour from "maplibre-contour"; // Asegúrate de instalarlo: npm install maplibre-contour
+import mlcontour from "maplibre-contour"; // Ensure this package is installed
 
-// Configura el token global de Mapbox
+// Set the global Mapbox token
 mapboxgl.accessToken =
 	"pk.eyJ1IjoiaWtlcmx1bmEiLCJhIjoiY203NjMwZHptMHAzaDJrcXlrbnNuMHJlZiJ9.hkoRlM6gQ-BflcGjpI40GA";
 
@@ -19,7 +19,7 @@ const MapEmbed = () => {
 		pitch: 0,
 		bearing: 0,
 		width: "100%",
-		height: "100%", // altura completa de la ventana
+		height: "100%",
 		hash: true,
 	});
 	const [records, setRecords] = useState(store.getAll());
@@ -40,7 +40,7 @@ const MapEmbed = () => {
 	const handleMapLoad = () => {
 		const map = mapRef.current.getMap();
 
-		// Configuración de mlcontour para contornos a partir de un DEM
+		// Set up mlcontour for DEM-based contours
 		const demSource = new mlcontour.DemSource({
 			url: "https://demotiles.maplibre.org/terrain-tiles/{z}/{x}/{y}.png",
 			encoding: "mapbox",
@@ -49,7 +49,7 @@ const MapEmbed = () => {
 		});
 		demSource.setupMaplibre(mapboxgl);
 
-		// Fuente y capa de hillshade basada en mlcontour
+		// Add hillshade source and layer with exaggeration set to 5
 		if (!map.getSource("hillshadeSource")) {
 			map.addSource("hillshadeSource", {
 				type: "raster-dem",
@@ -64,17 +64,17 @@ const MapEmbed = () => {
 				type: "hillshade",
 				source: "hillshadeSource",
 				layout: { visibility: "visible" },
-				paint: { "hillshade-exaggeration": 0.25 },
+				paint: { "hillshade-exaggeration": 5 },
 			});
 		}
 
-		// Fuente y capas de contornos
+		// Add contour vector source and layers
 		if (!map.getSource("contourSourceFeet")) {
 			map.addSource("contourSourceFeet", {
 				type: "vector",
 				tiles: [
 					demSource.contourProtocolUrl({
-						multiplier: 3.28084, // de metros a pies
+						multiplier: 3.28084,
 						overzoom: 1,
 						thresholds: {
 							11: [200, 1000],
@@ -124,61 +124,93 @@ const MapEmbed = () => {
 		}
 	};
 
+	// When selectedRecord changes, fly to its location.
+	useEffect(() => {
+		if (selectedRecord && mapRef.current) {
+			const map = mapRef.current.getMap();
+			map.flyTo({
+				center: [selectedRecord.lon, selectedRecord.lat],
+				zoom: 8, // Adjust zoom level as needed
+				speed: 1.2,
+				curve: 1,
+				easing: (t) => t,
+			});
+		}
+	}, [selectedRecord]);
+
 	const handleMarkerClick = (record) => {
 		selectRecord(record);
 	};
 
 	return (
-		<ReactMapGL
-			ref={mapRef}
-			{...viewport}
-			mapStyle='mapbox://styles/ikerluna/cm7b6ykln005d01s7fdffhda4'
-			mapboxApiAccessToken={mapboxgl.accessToken}
-			onLoad={handleMapLoad}
-			onMove={(evt) => setViewport(evt.viewState)}
-			onError={(error) => console.error("Mapbox error:", error)}
-			interactive
-		>
-			<NavigationControl position='top-right' />
-			{records.map((record) => (
-				<Marker key={record.id} latitude={record.lat} longitude={record.lon}>
-					<div
-						onClick={() => handleMarkerClick(record)}
-						style={{ cursor: "pointer" }}
-					>
-						<FaMapMarkerAlt
-							size={30}
-							color={
-								selectedRecord && record.id === selectedRecord.id
-									? "black"
-									: "grey"
-							}
-						/>
-					</div>
-				</Marker>
-			))}
-			{selectedRecord && (
-				<Popup
-					className='custom-popup'
-					latitude={selectedRecord.lat}
-					longitude={selectedRecord.lon}
-					closeButton
-					closeOnClick={false}
-					onClose={() => selectRecord(null)}
-					offsetTop={-10}
-				>
-					<div>
-						<div style={{ textAlign: "center" }}>
-							<h3>{selectedRecord.id}</h3>
+		<div className='map-wrapper' style={{ height: "500px", width: "100%" }}>
+			<ReactMapGL
+				ref={mapRef}
+				{...viewport}
+				mapStyle='mapbox://styles/ikerluna/cm7b6ykln005d01s7fdffhda4'
+				mapboxApiAccessToken={mapboxgl.accessToken}
+				onLoad={handleMapLoad}
+				onMove={(evt) => setViewport(evt.viewState)}
+				onError={(error) => console.error("Mapbox error:", error)}
+				interactive
+			>
+				<NavigationControl position='top-right' />
+				{records.map((record) => (
+					<Marker key={record.id} latitude={record.lat} longitude={record.lon}>
+						<div
+							onClick={() => handleMarkerClick(record)}
+							style={{
+								cursor: "pointer",
+								position: "relative",
+								display: "flex",
+								alignItems: "center",
+								justifyContent: "center",
+							}}
+						>
+							<FaMapMarker size={40} color='magenta' />
+							<span
+								style={{
+									position: "absolute",
+									color: "white",
+									fontWeight: "bold",
+									fontSize: "0.8rem",
+								}}
+							>
+								{record.id}
+							</span>
 						</div>
-						<audio controls autoPlay>
-							<source src={selectedRecord.audioFilePath} type='audio/mpeg' />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</Popup>
-			)}
-		</ReactMapGL>
+					</Marker>
+				))}
+				{selectedRecord && (
+					<Popup
+						className='custom-popup'
+						latitude={selectedRecord.lat}
+						longitude={selectedRecord.lon}
+						closeButton
+						closeOnClick={false}
+						onClose={() => selectRecord(null)}
+						offsetTop={-10}
+					>
+						<div>
+							<div style={{ textAlign: "center", marginBottom: "10px" }}>
+								<h3>ID: {selectedRecord.id}</h3>
+								<p>
+									<strong>Recordist:</strong> {selectedRecord.recordist}
+								</p>
+								<p>
+									<strong>Date:</strong> {selectedRecord.date}
+								</p>
+							</div>
+							{/* Removed autoPlay to prevent unwanted activation */}
+							<audio controls style={{ width: "100%" }}>
+								<source src={selectedRecord.audioFilePath} type='audio/mpeg' />
+								Your browser does not support the audio element.
+							</audio>
+						</div>
+					</Popup>
+				)}
+			</ReactMapGL>
+		</div>
 	);
 };
 

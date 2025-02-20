@@ -99,8 +99,8 @@ const datadummy = [
 		recordist: "Susan",
 		date: "15/10/2025",
 		time: "01:35:00",
-		lat: 63.90152,
-		lon: -137.95093,
+		lat: 63.90252, // slight offset added
+		lon: -137.94993, // slight offset added
 		temperature: "-35°C",
 		conditions: "Rain",
 		tags: "Interviews",
@@ -118,8 +118,8 @@ const datadummy = [
 		recordist: "Ricardo",
 		date: "16/10/2025",
 		time: "23:35:00",
-		lat: 64.55625,
-		lon: -138.51835,
+		lat: 64.55635, // slight offset added
+		lon: -138.51845, // slight offset added
 		temperature: "-35°C",
 		conditions: "Cloudy",
 		tags: "Tombstone Territorial Park",
@@ -156,8 +156,8 @@ const datadummy = [
 		recordist: "Julia",
 		date: "18/10/2025",
 		time: "01:35:00",
-		lat: 64.03985877,
-		lon: -138.1501049,
+		lat: 63.03995877, // slight offset added
+		lon: -138.1502049, // slight offset added
 		temperature: "-35°C",
 		conditions: "Cloudy",
 		tags: "Klondike River",
@@ -175,8 +175,8 @@ const datadummy = [
 		recordist: "Joao",
 		date: "19/10/2025",
 		time: "23:35:00",
-		lat: 64.03985877,
-		lon: -138.1501049,
+		lat: 64.03975877, // slight offset added
+		lon: -139.1500049, // slight offset added
 		temperature: "-35°C",
 		conditions: "Snow",
 		tags: "Klondike River",
@@ -194,8 +194,8 @@ const datadummy = [
 		recordist: "Joao",
 		date: "20/10/2025",
 		time: "00:35:00",
-		lat: 64.55629475,
-		lon: -138.5183446,
+		lat: 61.55619475, // slight offset added
+		lon: -138.5182446, // slight offset added
 		temperature: "-35°C",
 		conditions: "Clear",
 		tags: "Field Recording",
@@ -213,8 +213,8 @@ const datadummy = [
 		recordist: "Susan",
 		date: "21/10/2025",
 		time: "01:35:00",
-		lat: 64.55629475,
-		lon: -138.5183446,
+		lat: 62.55639475, // slight offset added
+		lon: -138.5184446, // slight offset added
 		temperature: "-35°C",
 		conditions: "Clear",
 		tags: "Field Recording",
@@ -232,8 +232,8 @@ const datadummy = [
 		recordist: "Ricardo",
 		date: "22/10/2025",
 		time: "23:35:00",
-		lat: 64.55629475,
-		lon: -138.5183446,
+		lat: 65.55649475, // slight offset added
+		lon: -139.5185446, // slight offset added
 		temperature: "-35°C",
 		conditions: "Clear",
 		tags: "Field Recording",
