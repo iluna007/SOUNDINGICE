@@ -52,7 +52,7 @@
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  font-size: 1.1vw;
+  font-size: 0.75vw;
   text-align: left;
   color: inherit;
   transition: background-color 0.2s;
@@ -119,6 +119,5 @@
   }
 }
 .map-masonry-item {
-  border: 2px solid black;
-  height: 90vh;
+  height: 100%;
 }

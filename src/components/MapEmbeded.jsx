@@ -193,7 +193,7 @@ const MapEmbed = () => {
 					>
 						<div>
 							<div style={{ textAlign: "center", marginBottom: "10px" }}>
-								<h3>ID: {selectedRecord.id}</h3>
+								<h3>{selectedRecord.id}</h3>
 								<p>
 									<strong>Recordist:</strong> {selectedRecord.recordist}
 								</p>

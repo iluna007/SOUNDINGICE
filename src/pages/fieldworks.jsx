@@ -119,7 +119,7 @@ const Fieldworks = () => {
 						</div>
 
 						{/* Field Trip section */}
-						<div className='row mt-5'>
+						<div className='row mt-12'>
 							<div className='col-md-12'>
 								<h3 className='subtitles'>Field Trip</h3>
 								<hr></hr>
@@ -144,6 +144,150 @@ const Fieldworks = () => {
 									ecological niches has resulted in a diverse collection of
 									flora and fauna uncommon at this latitude.
 								</p>
+							</div>
+						</div>
+						<div className='row mt-12'>
+							<div className='col-md-12'>
+								<h3 className='subtitles'>Field Notes</h3>
+								<hr></hr>
+								<p className='description'>
+									An audio-visual programme of listening exercises, talks,
+									screenings, workshops, and seminars
+								</p>
+							</div>
+							<div className='row mt-5'>
+								<div className='col-md-3 '>
+									<p className='description'>
+										<a
+											href='https://mfineart.ca/macaulay-co-fine-art/artists/jeneen-frei-njootli/'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='description_forlinks_fieldworks'
+										>
+											Jeneen Frei Njootli
+										</a>
+									</p>
+									<h3 className='subtitles'>
+										Sounds of Snow listening exercise & Artist Talk
+									</h3>
+									<hr></hr>
+
+									<p className='description'>
+										Jeneen Frei Njootli lives and works in their Vuntut Gwitchin
+										homelands, outside of Old Crow, Yukon. There is an
+										industrial and photo adjacent lean in their practice,
+										working with culturally intimate materials that manifest in
+										sculpture, regalia, performance and sound. They have gotten
+										to work with many mentors and knowledge holders over the
+										years in addition to holding an MFA from the University of
+										British Columbia and a BFA from Emily Carr University. Frei
+										Njootli’s work has been presented in many galleries, museums
+										and artist-run centers around the world. Recent exhibitions
+										include The Power Plant Contemporary Art Gallery, Toronto
+										(2025), Makeshift Memorials, Small Revolutions at KADIST San
+										Francisco (2024) Noise of the Flesh: Score for Gina Pane at
+										the FRAC (Fonds régional d’art contemporain) France (2023),
+										Indian Theatre, curated by Candice Hopkins at CCS BARD
+										Hessel Museum, NY (2023), Soft Water Hard Stone an
+										exhibition at the New Museum Triennial, New York (2021),
+										Listen Up: Northern Soundscapes, Anchorage Museum (2021),
+										Where Do We Go From Here? At the Vancouver Art Gallery
+										(2021).
+									</p>
+								</div>
+								<div className='col-md-3 '>
+									<p className='description'>
+										<a
+											href='https://www.uu.nl/staff/IRRDuncan#:~:text=Ifor%20Duncan%20is%20a%20writer,spaces%2C%20processes%2C%20and%20materialities.'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='description_forlinks_fieldworks'
+										>
+											Ifor Duncan
+										</a>
+									</p>
+									<h3 className='subtitles'>River Confluences </h3>
+									<hr></hr>
+
+									<p className='description'>
+										Ifor Duncan is a writer, artist and interdisciplinary
+										researcher. He is Postdoctoral Researcher on the ERC project
+										EcoViolence at the University of Utrecht. Ifor’s research
+										focuses on political violence against communities in the
+										contexts of degrading watery spaces, processes, and
+										materialities. These include river borders, mega-dam
+										projects and rivers as dynamic archives of genocide. He
+										encounters these concerns through visual cultures, cultural
+										memory, and a fieldwork practice that involves submerged
+										audio-visual methods. Ifor holds a PhD from the Centre for
+										Research Architecture, Department of Visual Cultures,
+										Goldsmiths University of London (2014-2019) where he was
+										also Lecturer (2022-2024). Ifor was postdoctoral fellow at
+										the New Institute Centre for the Environmental Humanities
+										(NICHE), Ca’ Foscari, University of Venice (2020-22), and
+										has taught in the School of Architecture at the Royal
+										College of Art.
+									</p>
+								</div>
+								<div className='col-md-3 '>
+									<p className='description'>Bill Morrison</p>
+									<h3 className='subtitles'>Dawson city: Frozen time </h3>
+									<hr></hr>
+
+									<p className='description'>
+										Bill Morrison, best known for the nitrate tone poem{" "}
+										<a
+											href='https://www.bfi.org.uk/film/cca55721-4f6b-5f8d-b488-971ad819c562/decasia'
+											target='_blank'
+											rel='noopener noreferrer'
+											className='description_forlinks_fieldworks'
+										>
+											Decasia
+										</a>
+										(2002), returns to the medium to compose a rollicking Gold
+										Rush ballad of newsreels, silent melodramas, comedies and
+										actualities. Its argument parallels the early years of
+										cinema with the white settlement of North America’s final
+										wild frontier, as well as the archaeological digging of
+										cinema historians and that of the miners. It’s an intricate
+										and holistic look at North American history, from colonial
+										encounters with members of the Tr’ondëk Hwëch’in First
+										Nation, whose fishing camp was settled as Dawson City, to
+										the collapsing capitalism of the Depression and its
+										injurious effects.
+									</p>
+								</div>
+								<div className='col-md-3 '>
+									<p className='description'>DCMF Studio</p>
+									<h3 className='subtitles'>Recording Workshop</h3>
+									<hr></hr>
+
+									<p className='description'>
+										Embark on a journey through the art and science of sound
+										recording in DCMF’s brand-new, state-of-the-art recording
+										space. This seminar serves as an immersive introduction to
+										professional-grade equipment while exploring the philosophy
+										and techniques of audio recording, designed for aspiring
+										audio engineers, field recordists, and creatives in film,
+										television, and music. Participants will follow the entire
+										signal chain—from capturing sound at its source and choosing
+										the right sensing objects (microphones and pickups) to
+										amplification, processing, and bridging the analog and
+										digital worlds to create high-quality recordings. Through
+										hands-on demonstrations and guided discussions, you will:
+										Explore the dual philosophies of sound recording—faithful
+										documentation and creative expression. Learn tools and
+										techniques specific to field recording, cinematic sound
+										design, and music production. Begin mastering the
+										cutting-edge capabilities of DCMF’s brand new facility,
+										gaining confidence in navigating its equipment and
+										workflows. Whether you're capturing live performances,
+										designing soundscapes for film, or producing music, this
+										seminar is your starting point for unlocking the creative
+										potential of sound recording. No prior experience is
+										required—just bring your curiosity and passion for sound.
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>

@@ -94,7 +94,22 @@ const FieldRecordings = () => {
 				}}
 			>
 				<h2 className='title'>Field Recordings</h2>
+
 				<div className='row mt-5'>
+					<div className='row mt-12'>
+						<p className='description'>
+							Technology must also be held accountable as part of an
+							ecologically valid practice. Microphones and recording kits, made
+							from minerals extracted from the earth through precarious and
+							dangerous labour, imply that neither sound capture nor its
+							consequent representations can ever be separate from the
+							geopolitical resources and networks that allow signals to be
+							captured in the first place. Gripping a microphone confirms there
+							is no impartial position, no benign technology, no objective
+							recording.—Mark Peter Wright, Listening After Nature: Field
+							Recording, Ecology, Critical Practice
+						</p>
+					</div>
 					<div className='col-md-2'>
 						<h3 className='subtitles'>Recordist</h3>
 						<hr />

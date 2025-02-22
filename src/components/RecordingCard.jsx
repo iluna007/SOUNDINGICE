@@ -40,10 +40,7 @@ const RecordingCard = ({ record }) => {
 				<div className='recording-details'>
 					<h3>{record.id}</h3>
 					<p>
-						<strong>Date:</strong> {record.date}
-					</p>
-					<p>
-						<strong>Time:</strong> {record.time}
+						<strong>Recordist:</strong> {record.recordist}
 					</p>
 					<p>
 						<strong>Location:</strong> Lat: {record.lat}, Lon: {record.lon}
@@ -52,17 +49,21 @@ const RecordingCard = ({ record }) => {
 						<strong>Conditions:</strong> {record.conditions}
 					</p>
 					<p>
-						<strong>Key Words:</strong> {record.tags || record["Key Words"]}
+						<strong>Date:</strong> {record.date}
 					</p>
 					<p>
-						<strong>Recordist:</strong> {record.recordist}
+						<strong>Time:</strong> {record.time}
 					</p>
+					<p>
+						<strong>Key Words:</strong> {record.tags || record["Key Words"]}
+					</p>
+
 					<audio controls autoPlay>
 						<source src={record.audioFilePath} type='audio/mpeg' />
 						Your browser does not support the audio element.
 					</audio>
 					<Button variant='dark' onClick={handleShow}>
-						Field Notes
+						More Info
 					</Button>
 				</div>
 			) : (
@@ -73,7 +74,7 @@ const RecordingCard = ({ record }) => {
 
 			<Offcanvas show={show} onHide={handleClose} backdrop='static'>
 				<Offcanvas.Header closeButton>
-					<Offcanvas.Title>Field Notes for: {record.id}</Offcanvas.Title>
+					<Offcanvas.Title>{record.id}</Offcanvas.Title>
 				</Offcanvas.Header>
 				<Offcanvas.Body>
 					<p>
@@ -92,15 +93,19 @@ const RecordingCard = ({ record }) => {
 						<strong>Conditions:</strong> {record.conditions}
 					</p>
 					<p>
+						<strong>Equipment:</strong> {record.equipment}
+					</p>
+
+					<p>
 						<strong>Key Words:</strong> {record.tags || record["Key Words"]}
 					</p>
 					<audio controls autoPlay>
 						<source src={record.audioFilePath} type='audio/mpeg' />
 						Your browser does not support the audio element.
 					</audio>
-					<h5>Field Notes:</h5>
+					<h5>Observations:</h5>
 					<ul>
-						{record.field_notes.map((note, index) => (
+						{record.observations.map((note, index) => (
 							<li key={index}>{note}</li>
 						))}
 					</ul>
@@ -123,7 +128,8 @@ RecordingCard.propTypes = {
 		conditions: PropTypes.string.isRequired,
 		tags: PropTypes.string,
 		"Key Words": PropTypes.string,
-		field_notes: PropTypes.arrayOf(PropTypes.string).isRequired,
+		observations: PropTypes.arrayOf(PropTypes.string).isRequired,
+		equipment: PropTypes.string.isRequired
 	}).isRequired,
 };
 

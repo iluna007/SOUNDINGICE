@@ -61,9 +61,9 @@ const About = () => {
 								environment—Earth evidence—and its urgent calls to action.
 							</p>
 							<p className='description'>
-								<strong>Students:</strong> Andrew Kearns, Bronwyn Butterfield,
-								Gabe McLellan, Grace Bruder, Jove Boutin, Lacey Leforte, Milo
-								Jackson, Sadie Wasylko, Sam Huxley.
+								<strong>Students:</strong> Jove Boutin, Grace Bruder, Bronwyn
+								Butterfield, Sam Huxley, Andrew Kearns, Milo Jackson, Lacey
+								Leforte, Gabe McLellan, Sadie Wasylko.
 							</p>
 							<p className='description'>
 								Supported by Yukon School of Visual Arts, the Klondike Institute
@@ -119,7 +119,9 @@ const About = () => {
 								>
 									Forensic Architecture
 								</a>{" "}
-								recipient of the 2024 Right Livelihood Award.
+								recipient of the 2024 Right Livelihood Award. She received her BA
+								from Simon Fraser University, MFA from UCSD, and PhD in Cultural
+								Studies & Research Architecture, from Goldsmiths.
 							</p>
 
 							<p className='description'>
