@@ -27,7 +27,7 @@ const datadummy = [
 		lon: -139.442815,
 		temperature: "-35°C",
 		conditions: "Cloudy",
-		tags: "Yukon River",
+		tags: "Yukon River, underwater",
 		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Iceberg_Calving_-_Hansbreen_Glacier_r1gewz.mp3",
 		pictureFilePath:
@@ -46,7 +46,7 @@ const datadummy = [
 		lon: -138.47639,
 		temperature: "-35°C",
 		conditions: "Cloudy",
-		tags: "Klondike River",
+		tags: "Klondike River, underwater",
 		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Belcher_Glacier_knpuil.mp3",
 		pictureFilePath:
@@ -65,7 +65,7 @@ const datadummy = [
 		lon: -137.95093,
 		temperature: "-35°C",
 		conditions: "Snow",
-		tags: "Field Work",
+		tags: "Archives, Interviews",
 		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316581/Grant_Deane_Records_Melting_Ice_xn4mp2.mp3",
 		pictureFilePath:
@@ -103,7 +103,7 @@ const datadummy = [
 		lon: -137.94993, // slight offset added
 		temperature: "-35°C",
 		conditions: "Rain",
-		tags: "Interviews",
+		tags: "Interviews, archives",
 		audioFilePath:
 			"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739316582/Hornshund_Underwater_c7abfh.mp3",
 		pictureFilePath:

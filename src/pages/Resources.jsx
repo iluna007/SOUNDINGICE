@@ -19,20 +19,7 @@ const Resources = () => {
 						<h3 className='subtitles'>Readings</h3>
 						<hr></hr>
 						<ul className='description'>
-							<li>
-								<strong>Benoit Turcotte.</strong> “Will There Be an Ice Bridge
-								This Winter? Predicting Spatio-Temporal Freeze-up Patterns Along
-								the Yukon River, Canada”.{" "}
-								<a
-									href='https://www.iahr.org/library/infor?pid=8556'
-									target='_blank'
-									rel='noopener noreferrer'
-									className='description_forlinks_resources'
-								>
-									Proceedings of the 25th IAHR International Symposium on Ice
-									(Trondheim, 2020).
-								</a>
-							</li>
+							
 							<li>
 								<strong>Burrell, B. C., Beltaos, S., &amp; Turcotte, B.</strong>{" "}
 								“Effects of climate change on river-ice processes and ice jams”.
