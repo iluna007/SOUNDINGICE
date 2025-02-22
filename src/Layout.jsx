@@ -15,7 +15,7 @@ const pages = [
 	{
 		title: "Field Works",
 		route: "/fieldworks",
-		color: "#ff00ff ",
+		color: "#ff00ff",
 		icon: "asterisk",
 	},
 	{
