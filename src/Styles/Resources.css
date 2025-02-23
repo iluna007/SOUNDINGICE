@@ -17,17 +17,26 @@ img.img-fluid {
   margin: 0;
   line-height: 0.8;
   text-align: right;
-   /* Ajusta el espacio entre líneas */
-   /* Ajusta el espacio entre líneas */
 }
 
+/* Estilos para las listas de Resources */
+ul.description {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin: 0;
+  padding-left: 20px;
+}
+
+ul.description li {
+  display: list-item;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
 
 .description {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 1.1vw; /* Tamaño más pequeño para la descripción */
-  display: inline-block; /* Para que el fondo se ajuste al contenido */
-  text-align: justify;
   text-align: left;
   color: inherit;
 }
@@ -36,8 +45,6 @@ img.img-fluid {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 1.1vw; /* Tamaño más pequeño para la descripción */
-  display: inline-block; /* Para que el fondo se ajuste al contenido */
-  text-align: justify;
   text-align: left;
   color: inherit;
   text-decoration: none;
@@ -60,4 +67,3 @@ img.img-fluid {
   margin-top: 20px;
   clear: both;
 }
-
