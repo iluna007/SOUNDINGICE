@@ -6,7 +6,7 @@
 .title {
   font-family: "Bebas Neue", sans-serif;
   font-weight: bolder;
-  font-size: 10vw; /* Mantén el tamaño grande para el título */
+  font-size: 10vw;
   margin: 0;
   line-height: 0.8;
   text-align: right;
@@ -64,23 +64,19 @@
   font-weight: bold;
 }
 
-/* Se elimina el grid original y se usa masonry */
+/* Masonry styles */
 .recording-list {
-  /* Este contenedor ya lo maneja react-masonry-css */
 }
 
-/* Estilos para react-masonry-css */
 .my-masonry-grid {
   display: flex;
-  margin-left: -5px; /* Ajusta según el gutter deseado */
+  margin-left: -5px;
   width: auto;
 }
 .my-masonry-grid_column {
-  padding-left: 5px; /* Espacio entre columnas */
+  padding-left: 5px;
   background-clip: padding-box;
 }
-
-/* Opcional: margen inferior para cada tarjeta */
 .my-masonry-grid_column > div {
   margin-bottom: 5px;
 }

@@ -1,30 +1,38 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "../Styles/Home.css";
 import GlitchText from "../components/GlitchText";
 
 const Home = () => {
 	const videoRef = useRef(null);
+	const videos = [
+		"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1740349894/SI_Landing_Page_k1914v.mp4",
+		"https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739293566/Yukon_in_Winter_Chromatic_icotzx.mp4",
+	];
+	const [currentIndex, setCurrentIndex] = useState(0);
 
 	useEffect(() => {
 		const video = videoRef.current;
-		const handleCanPlay = () => {
+		const handleEnded = () => {
+			const nextIndex = (currentIndex + 1) % videos.length;
+			setCurrentIndex(nextIndex);
+			video.src = videos[nextIndex];
 			video.play();
 		};
-		video.addEventListener("canplay", handleCanPlay);
+		video.addEventListener("ended", handleEnded);
+		video.addEventListener("canplay", () => video.play());
 		return () => {
-			video.removeEventListener("canplay", handleCanPlay);
+			video.removeEventListener("ended", handleEnded);
 		};
-	}, []);
+	}, [currentIndex, videos]);
 
 	return (
 		<div className='home-container'>
 			<div className='video-container'>
 				<video
 					ref={videoRef}
-					src='https://res.cloudinary.com/dw1ht0zfd/video/upload/v1739293566/Yukon_in_Winter_Chromatic_icotzx.mp4'
+					src={videos[currentIndex]}
 					autoPlay
-					loop
 					muted
 					playsInline
 					className='background-video'

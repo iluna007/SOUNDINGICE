@@ -168,7 +168,7 @@ const Fieldworks = () => {
 										</a>
 									</p>
 									<h3 className='subtitles'>
-										Sounds of Snow listening exercise & Artist Talk
+										Listening Exercise & Artist Talk
 									</h3>
 									<hr></hr>
 
@@ -231,7 +231,9 @@ const Fieldworks = () => {
 								</div>
 								<div className='col-md-3 '>
 									<p className='description'>Bill Morrison</p>
-									<h3 className='subtitles'>Dawson city: Frozen time </h3>
+									<h3 className='subtitles'>
+										Screening: Dawson City: Frozen Time
+									</h3>
 									<hr></hr>
 
 									<p className='description'>
@@ -254,7 +256,7 @@ const Fieldworks = () => {
 										encounters with members of the Tr’ondëk Hwëch’in First
 										Nation, whose fishing camp was settled as Dawson City, to
 										the collapsing capitalism of the Depression and its
-										injurious effects.
+										injurious effects. Fim: 2016, 120 mins.
 									</p>
 								</div>
 								<div className='col-md-3 '>
@@ -264,28 +266,20 @@ const Fieldworks = () => {
 
 									<p className='description'>
 										Embark on a journey through the art and science of sound
-										recording in DCMF’s brand-new, state-of-the-art recording
-										space. This seminar serves as an immersive introduction to
-										professional-grade equipment while exploring the philosophy
-										and techniques of audio recording, designed for aspiring
-										audio engineers, field recordists, and creatives in film,
-										television, and music. Participants will follow the entire
-										signal chain—from capturing sound at its source and choosing
-										the right sensing objects (microphones and pickups) to
-										amplification, processing, and bridging the analog and
-										digital worlds to create high-quality recordings. Through
-										hands-on demonstrations and guided discussions, you will:
-										Explore the dual philosophies of sound recording—faithful
-										documentation and creative expression. Learn tools and
-										techniques specific to field recording, cinematic sound
-										design, and music production. Begin mastering the
-										cutting-edge capabilities of DCMF’s brand new facility,
-										gaining confidence in navigating its equipment and
-										workflows. Whether you're capturing live performances,
-										designing soundscapes for film, or producing music, this
-										seminar is your starting point for unlocking the creative
-										potential of sound recording. No prior experience is
-										required—just bring your curiosity and passion for sound.
+										recording. This workshop serves as an immersive introduction
+										to professional-grade equipment while exploring the
+										philosophy and techniques of audio recording. Participants
+										will follow the entire signal chain—from capturing sound at
+										its source and choosing the right sensing objects
+										(microphones and pickups) to amplification, processing, and
+										bridging the analogue and digital worlds to create
+										high-quality recordings. Through hands-on demonstrations and
+										guided discussions, you will: Explore the dual philosophies
+										of sound recording—faithful documentation and creative
+										expression. Learn tools and techniques specific to field
+										recording, cinematic sound design, and music production.
+										Begin mastering the cutting-edge capabilities of DCMF’s
+										brand-new facility.
 									</p>
 								</div>
 							</div>

@@ -74,7 +74,7 @@ const FieldRecordings = () => {
 		}
 	};
 
-	// Define los puntos de quiebre para el masonry de tarjetas
+	// Define breakpoints for the masonry layout
 	const breakpointColumnsObj = {
 		default: 3,
 		1100: 2,
@@ -106,8 +106,11 @@ const FieldRecordings = () => {
 							geopolitical resources and networks that allow signals to be
 							captured in the first place. Gripping a microphone confirms there
 							is no impartial position, no benign technology, no objective
-							recording.—Mark Peter Wright, Listening After Nature: Field
-							Recording, Ecology, Critical Practice
+							recording.—Mark Peter Wright,{" "}
+							<em>
+								Listening After Nature: Field Recording, Ecology, Critical
+								Practice
+							</em>
 						</p>
 					</div>
 					<div className='col-md-2'>
@@ -234,7 +237,6 @@ const FieldRecordings = () => {
 						</div>
 					</div>
 					<div className='col-md-5'>
-						{/* MapEmbed envuelto en Masonry, pero limitado a su contenedor asignado */}
 						<Masonry
 							breakpointCols={{ default: 1 }}
 							className='my-masonry-grid'
