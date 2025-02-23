@@ -78,7 +78,13 @@ const About = () => {
 							</p>
 							<p className='description'>
 								Project Credits: Drone Footage by John Howland & Bobby Ronka.
-								Website designed by Iker Luna.
+								Website designed by{" "}
+								<a
+									href='mailto:arquitectoikerluna@gmail.com'
+									className='description_forlinks_about'
+								>
+									Iker Luna.
+								</a>
 							</p>
 						</div>
 						<div className='mt-5'>
@@ -119,9 +125,9 @@ const About = () => {
 								>
 									Forensic Architecture
 								</a>{" "}
-								recipient of the 2024 Right Livelihood Award. She received her BA
-								from Simon Fraser University, MFA from UCSD, and PhD in Cultural
-								Studies & Research Architecture, from Goldsmiths.
+								recipient of the 2024 Right Livelihood Award. She received her
+								BA from Simon Fraser University, MFA from UCSD, and PhD in
+								Cultural Studies & Research Architecture, from Goldsmiths.
 							</p>
 
 							<p className='description'>
